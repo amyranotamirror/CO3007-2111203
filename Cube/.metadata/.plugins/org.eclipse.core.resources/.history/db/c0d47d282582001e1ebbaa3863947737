@@ -44,6 +44,4 @@ void init_led_segment(){
 	}
 }
 
-void modify_led_segment_buffer(TRAFFIC_LIGHT_SIDE trafficSide, uint16_t number){
-
-}
+void modify_led_segment_buffer(TRAFFIC_LIGHT_SIDE trafficSide, uint16_t number);

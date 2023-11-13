@@ -11,12 +11,10 @@
 
 /* Private define */
 typedef struct _ledSegment{
-	GPIO_config *ledSegmentPhysical;
+	GPIO_TypeDef *ledSegmentPhysical;
 	int isEnable;
 	int numberToDisplay;
 } ledSegment;
-GPIO_PinState TURN_OFF = GPIO_PIN_SET;
-GPIO_PinState TURN_ON = GPIO_PIN_RESET;
 
 /* Private variables declaration */
 int LED_SEG_HEX = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x02, 0x78, 0x00, 0xFF};
@@ -39,11 +37,9 @@ void init_led_segment(){
 
 	for(uint16_t side = 0; side < NUM_SIDE; side++){
 		for(uint16_t color = 0; color < NUM_COLOR; color++){
-			HAL_GPIO_WritePin((ledSegments[side][color].ledSegmentPhysical)->port, (ledSegments[side][color].ledSegmentPhysical)->pin, TURN_OFF)
+			HAL_GPIO_WritePin(ledSegments[side][color]., GPIO_Pin, PinState)
 		}
 	}
 }
 
-void modify_led_segment_buffer(TRAFFIC_LIGHT_SIDE trafficSide, uint16_t number){
-
-}
+void modify_led_segment_buffer(TRAFFIC_LIGHT_SIDE trafficSide, uint16_t number);

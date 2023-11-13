@@ -39,11 +39,9 @@ void init_led_segment(){
 
 	for(uint16_t side = 0; side < NUM_SIDE; side++){
 		for(uint16_t color = 0; color < NUM_COLOR; color++){
-			HAL_GPIO_WritePin((ledSegments[side][color].ledSegmentPhysical)->port, (ledSegments[side][color].ledSegmentPhysical)->pin, TURN_OFF)
+			HAL_GPIO_WritePin((ledSegments[side][color].ledSegmentPhysical)->port, (ledSegments[side][color].ledSegmentPhysical)->pin, PinState)
 		}
 	}
 }
 
-void modify_led_segment_buffer(TRAFFIC_LIGHT_SIDE trafficSide, uint16_t number){
-
-}
+void modify_led_segment_buffer(TRAFFIC_LIGHT_SIDE trafficSide, uint16_t number);
