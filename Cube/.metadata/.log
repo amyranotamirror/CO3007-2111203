@@ -1,0 +1,154 @@
+!SESSION 2023-11-13 14:33:58.421 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-11-13 14:34:07.207
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-11-13 14:34:07.333
+!MESSAGE Log4j initialized with config file D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-11-13 14:34:25.360
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-13 14:35:58.033
+!MESSAGE Indexed 'Button' (19 sources, 78 headers) in 2.58 sec: 3,647 declarations; 13,140 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.012%)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2023-11-13 14:35:59.635
+!MESSAGE No repository found at http://eclipse-fonts.googlecode.com/svn/trunk/FontsUpdate/.
+
+!ENTRY org.eclipse.cdt.ui 4 4 2023-11-13 15:34:51.447
+!MESSAGE Error
+!STACK 1
+C Model Exception: Core Exception [code 77] 'global.' is an invalid name on this platform.
+	at org.eclipse.cdt.internal.core.model.BatchOperation.executeOperation(BatchOperation.java:47)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:346)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:613)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.cdt.core.model.CoreModel.run(CoreModel.java:1230)
+	at org.eclipse.cdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:88)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.core.internal.resources.ResourceException: 'global.' is an invalid name on this platform.
+	at org.eclipse.core.internal.resources.Resource.checkValidPath(Resource.java:436)
+	at org.eclipse.core.internal.resources.File.create(File.java:103)
+	at org.eclipse.core.internal.resources.File.create(File.java:179)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createFile(NewSourceFileGenerator.java:150)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createNewFile(NewSourceFileGenerator.java:139)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createEmptyFile(NewSourceFileGenerator.java:117)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createHeaderFile(NewSourceFileGenerator.java:104)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewHeaderFileCreationWizardPage.createFile(NewHeaderFileCreationWizardPage.java:163)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.AbstractFileCreationWizard.finishPage(AbstractFileCreationWizard.java:43)
+	at org.eclipse.cdt.internal.ui.wizards.NewElementWizard.lambda$1(NewElementWizard.java:88)
+	at org.eclipse.cdt.internal.core.model.BatchOperation.executeOperation(BatchOperation.java:36)
+	... 7 more
+!SUBENTRY 1 org.eclipse.cdt.core 4 966 2023-11-13 15:34:51.448
+!MESSAGE 'global.' is an invalid name on this platform.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: 'global.' is an invalid name on this platform.
+	at org.eclipse.core.internal.resources.Resource.checkValidPath(Resource.java:436)
+	at org.eclipse.core.internal.resources.File.create(File.java:103)
+	at org.eclipse.core.internal.resources.File.create(File.java:179)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createFile(NewSourceFileGenerator.java:150)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createNewFile(NewSourceFileGenerator.java:139)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createEmptyFile(NewSourceFileGenerator.java:117)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createHeaderFile(NewSourceFileGenerator.java:104)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewHeaderFileCreationWizardPage.createFile(NewHeaderFileCreationWizardPage.java:163)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.AbstractFileCreationWizard.finishPage(AbstractFileCreationWizard.java:43)
+	at org.eclipse.cdt.internal.ui.wizards.NewElementWizard.lambda$1(NewElementWizard.java:88)
+	at org.eclipse.cdt.internal.core.model.BatchOperation.executeOperation(BatchOperation.java:36)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:346)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:613)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.cdt.core.model.CoreModel.run(CoreModel.java:1230)
+	at org.eclipse.cdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:88)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2023-11-13 15:34:51.448
+!MESSAGE 'global.' is an invalid name on this platform.
+
+!ENTRY org.eclipse.cdt.ui 4 4 2023-11-13 16:29:15.730
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.dom.parser.c.CFunction.getParameters(CFunction.java:135)
+	at org.eclipse.cdt.internal.ui.text.contentassist.DOMCompletionProposalComputer.handleFunction(DOMCompletionProposalComputer.java:602)
+	at org.eclipse.cdt.internal.ui.text.contentassist.DOMCompletionProposalComputer.handleBinding(DOMCompletionProposalComputer.java:369)
+	at org.eclipse.cdt.internal.ui.text.contentassist.DOMCompletionProposalComputer.computeCompletionProposals(DOMCompletionProposalComputer.java:192)
+	at org.eclipse.cdt.internal.ui.text.contentassist.ParsingBasedProposalComputer.computeCompletionProposals(ParsingBasedProposalComputer.java:56)
+	at org.eclipse.cdt.internal.ui.text.contentassist.CompletionProposalComputerDescriptor.computeCompletionProposals(CompletionProposalComputerDescriptor.java:299)
+	at org.eclipse.cdt.internal.ui.text.contentassist.CompletionProposalCategory.computeCompletionProposals(CompletionProposalCategory.java:266)
+	at org.eclipse.cdt.internal.ui.text.contentassist.ContentAssistProcessor.collectProposals(ContentAssistProcessor.java:263)
+	at org.eclipse.cdt.internal.ui.text.contentassist.ContentAssistProcessor.computeCompletionProposals(ContentAssistProcessor.java:215)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$2.lambda$0(ContentAssistant.java:2020)
+	at java.base/java.util.Collections$SingletonSet.forEach(Collections.java:4797)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$2.run(ContentAssistant.java:2019)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.computeCompletionProposals(ContentAssistant.java:2016)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.computeProposals(CompletionProposalPopup.java:577)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.lambda$3(CompletionProposalPopup.java:1624)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.incrementalComplete(CompletionProposalPopup.java:1619)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.showPossibleCompletions(ContentAssistant.java:1829)
+	at org.eclipse.cdt.internal.ui.editor.CEditor$AdaptedSourceViewer.doOperation(CEditor.java:339)
+	at org.eclipse.ui.texteditor.ContentAssistAction.lambda$0(ContentAssistAction.java:85)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.ui.texteditor.ContentAssistAction.run(ContentAssistAction.java:84)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:121)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor191.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:253)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:584)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:653)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:443)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1270)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1042)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1067)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1052)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1094)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1090)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1519)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4882)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4760)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4930)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3624)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)

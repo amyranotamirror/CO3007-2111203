@@ -1,0 +1,22 @@
+/*
+ * UDF_global.h
+ *
+ *  Created on: Nov 13, 2023
+ *      Author: Amyra Nguyen
+ */
+
+#ifndef INC_UDF_GLOBAL_H_
+#define INC_UDF_GLOBAL_H_
+/* Import library */
+#include "main.h"
+/* Public variables declaration */
+typedef struct _GPIO_config{
+	GPIO_TypeDef* port;
+	uint16_t pin;
+} GPIO_config;
+/* Public function declaration */
+
+GPIO_config* init_GPIO(GPIO_TypeDef* port, uint16_t pin);
+
+
+#endif /* INC_UDF_GLOBAL_H_ */

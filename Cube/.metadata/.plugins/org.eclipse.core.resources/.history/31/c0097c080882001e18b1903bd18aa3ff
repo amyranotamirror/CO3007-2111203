@@ -1,0 +1,19 @@
+/*
+ * UDF_led_indicator.h
+ *
+ *  Created on: Nov 13, 2023
+ *      Author: Amyra Nguyen
+ */
+
+#ifndef INC_UDF_LED_INDICATOR_H_
+#define INC_UDF_LED_INDICATOR_H_
+/* Import library */
+#include "UDF_global.h"
+/* Public variables declaration */
+
+/* Public function declaration */
+void enable_led_indicator(LED_SEG_DIGIT digitPosition, TRAFFIC_LIGHT_SIDE trafficSide, TRAFFIC_LIGHT_COLOR lightColor);
+
+
+
+#endif /* INC_UDF_LED_INDICATOR_H_ */

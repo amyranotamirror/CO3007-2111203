@@ -1,0 +1,24 @@
+/*
+ * UDF_global.h
+ *
+ *  Created on: Nov 13, 2023
+ *      Author: Amyra Nguyen
+ */
+
+#ifndef INC_UDF_GLOBAL_H_
+#define INC_UDF_GLOBAL_H_
+/* Import library */
+#include "main.h"
+/* Public variables declaration */
+typedef struct _GPIO_config{
+	GPIO_TypeDef* port;
+	uint16_t pin;
+} GPIO_config;
+enum BUTTON_STATE {IS_PRESSED, IS_RELEASED, IS_LONG_PRESSED};
+enum MODE {NORMAL, MODIFY_RED, MODIFY_GREEN, MODIFY_AMBER}
+enum TRAFFIC_LIGHT_SIDE{SIDE_A, SIDE_B};
+enum LED_SEG_DIGIT{LEFT, RIGHT};
+/* Public function declaration */
+
+
+#endif /* INC_UDF_GLOBAL_H_ */

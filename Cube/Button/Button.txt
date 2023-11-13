@@ -1,0 +1,96 @@
+Configuration	Button
+STM32CubeMX 	6.3.0
+Date	11/13/2023
+MCU	STM32F103C6Tx
+
+
+
+PERIPHERALS	MODES	FUNCTIONS	PINS
+SYS	Serial Wire	SYS_JTCK-SWCLK	PA14
+SYS	Serial Wire	SYS_JTMS-SWDIO	PA13
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+TIM2	Internal Clock	TIM2_VS_ClockSourceINT	VP_TIM2_VS_ClockSourceINT
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+11	PA1	GPIO_Output	RED_0
+12	PA2	GPIO_Output	GREEN_0
+13	PA3	GPIO_Output	YELLOW_0
+14	PA4	GPIO_Output	RED_1
+15	PA5	GPIO_Output	GREEN_1
+16	PA6	GPIO_Output	YELLOW_1
+18	PB0	GPIO_Output	SEG_A
+19	PB1	GPIO_Output	SEG_B
+20	PB2	GPIO_Output	SEG_C
+21	PB10	GPIO_Output	EN1_RIGHT
+22	PB11	GPIO_Input	BUTTON_1
+25	PB12	GPIO_Input	BUTTON_2
+26	PB13	GPIO_Input	BUTTON_3
+34	PA13	SYS_JTMS-SWDIO	
+37	PA14	SYS_JTCK-SWCLK	
+39	PB3	GPIO_Output	SEG_D
+40	PB4	GPIO_Output	SEG_E
+41	PB5	GPIO_Output	SEG_F
+42	PB6	GPIO_Output	SEG_G
+43	PB7	GPIO_Output	EN0_LEFT
+45	PB8	GPIO_Output	EN0_RIGHT
+46	PB9	GPIO_Output	EN1_LEFT
+PERIPHERALS	MODES	FUNCTIONS	PINS
+SYS	Serial Wire	SYS_JTCK-SWCLK	PA14
+SYS	Serial Wire	SYS_JTMS-SWDIO	PA13
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+TIM2	Internal Clock	TIM2_VS_ClockSourceINT	VP_TIM2_VS_ClockSourceINT
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+11	PA1	GPIO_Output	RED_0
+12	PA2	GPIO_Output	GREEN_0
+13	PA3	GPIO_Output	YELLOW_0
+14	PA4	GPIO_Output	RED_1
+15	PA5	GPIO_Output	GREEN_1
+16	PA6	GPIO_Output	YELLOW_1
+18	PB0	GPIO_Output	SEG_A
+19	PB1	GPIO_Output	SEG_B
+20	PB2	GPIO_Output	SEG_C
+21	PB10	GPIO_Output	EN1_RIGHT
+22	PB11	GPIO_Input	BUTTON_1
+25	PB12	GPIO_Input	BUTTON_2
+26	PB13	GPIO_Input	BUTTON_3
+34	PA13	SYS_JTMS-SWDIO	
+37	PA14	SYS_JTCK-SWCLK	
+39	PB3	GPIO_Output	SEG_D
+40	PB4	GPIO_Output	SEG_E
+41	PB5	GPIO_Output	SEG_F
+42	PB6	GPIO_Output	SEG_G
+43	PB7	GPIO_Output	EN0_LEFT
+45	PB8	GPIO_Output	EN0_RIGHT
+46	PB9	GPIO_Output	EN1_LEFT
+
+
+
+SOFTWARE PROJECT
+
+Project Settings : 
+Project Name : Button
+Project Folder : D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Button
+Toolchain / IDE : STM32CubeIDE
+Firmware Package Name and Version : STM32Cube FW_F1 V1.8.5
+
+
+Code Generation Settings : 
+STM32Cube MCU packages and embedded software packs : Copy only the necessary library files
+Generate peripheral initialization as a pair of '.c/.h' files per peripheral : No
+Backup previously generated files when re-generating : No
+Delete previously generated files when not re-generated : Yes
+Set all free pins as analog (to optimize the power consumption) : No
+
+
+Toolchains Settings : 
+Compiler Optimizations : 
+
+
+
+
+

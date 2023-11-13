@@ -1,0 +1,21 @@
+/*
+ * UDF_led_indicator.c
+ *
+ *  Created on: Nov 13, 2023
+ *      Author: Amyra Nguyen
+ */
+
+
+/* Import library */
+#include "UDF_led_indicator.h"
+/* Private variables declaration */
+
+/* Private function  */
+
+/* Public function  */
+void init_led_indicator(){
+
+}
+void display_led_indicator(LED_SEG_DIGIT digitPosition, TRAFFIC_LIGHT_SIDE trafficSide, TRAFFIC_LIGHT_COLOR lightColor){
+
+}
