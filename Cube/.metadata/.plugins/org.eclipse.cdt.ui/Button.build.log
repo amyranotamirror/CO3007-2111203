@@ -1,67 +1,63 @@
-11:17:11 **** Incremental Build of configuration Debug for project Button ****
+18:14:19 **** Incremental Build of configuration Debug for project Button ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/UDF_button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/UDF_button.d" -MT"Core/Src/UDF_button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/UDF_button.o"
-arm-none-eabi-gcc "../Core/Src/UDF_global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/UDF_global.d" -MT"Core/Src/UDF_global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/UDF_global.o"
 arm-none-eabi-gcc "../Core/Src/UDF_led_indicator.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/UDF_led_indicator.d" -MT"Core/Src/UDF_led_indicator.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/UDF_led_indicator.o"
 arm-none-eabi-gcc "../Core/Src/UDF_led_segment.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/UDF_led_segment.d" -MT"Core/Src/UDF_led_segment.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/UDF_led_segment.o"
 arm-none-eabi-gcc "../Core/Src/UDF_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/UDF_timer.d" -MT"Core/Src/UDF_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/UDF_timer.o"
 arm-none-eabi-gcc "../Core/Src/UDF_traffic_light.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/UDF_traffic_light.d" -MT"Core/Src/UDF_traffic_light.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/UDF_traffic_light.o"
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-In file included from ../Core/Inc/UDF_button.h:12,
+In file included from ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:128,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f1xx_hal_conf.h:237,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Inc/UDF_global.h:11,
+                 from ../Core/Inc/UDF_button.h:12,
                  from ../Core/Src/UDF_button.c:10:
-../Core/Inc/UDF_global.h:32:69: warning: useless storage class specifier in empty declaration
-   32 | typedef enum {TIMER_BUTTON, TIMER_LED_INDICATOR, TIMER_LED_SEGMENT, TIMER_SECOND};
-      |                                                                     ^~~~~~~~~~~~
-In file included from ../Core/Src/UDF_global.c:10:
-../Core/Inc/UDF_global.h:32:69: warning: useless storage class specifier in empty declaration
-   32 | typedef enum {TIMER_BUTTON, TIMER_LED_INDICATOR, TIMER_LED_SEGMENT, TIMER_SECOND};
-      |                                                                     ^~~~~~~~~~~~
-In file included from ../Core/Inc/UDF_led_indicator.h:11,
-                 from ../Core/Src/UDF_led_indicator.c:10:
-../Core/Inc/UDF_global.h:32:69: warning: useless storage class specifier in empty declaration
-   32 | typedef enum {TIMER_BUTTON, TIMER_LED_INDICATOR, TIMER_LED_SEGMENT, TIMER_SECOND};
-      |                                                                     ^~~~~~~~~~~~
-In file included from ../Core/Inc/UDF_led_segment.h:11,
-                 from ../Core/Src/UDF_led_segment.c:10:
-../Core/Inc/UDF_global.h:32:69: warning: useless storage class specifier in empty declaration
-   32 | typedef enum {TIMER_BUTTON, TIMER_LED_INDICATOR, TIMER_LED_SEGMENT, TIMER_SECOND};
-      |                                                                     ^~~~~~~~~~~~
-../Core/Src/UDF_led_segment.c:18:26: warning: excess elements in scalar initializer
-   18 | int LED_SEG_HEX = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x02, 0x78, 0x00, 0xFF};
-      |                          ^~~~
-../Core/Src/UDF_led_segment.c:18:26: note: (near initialization for 'LED_SEG_HEX')
-../Core/Src/UDF_led_segment.c:18:32: warning: excess elements in scalar initializer
-   18 | int LED_SEG_HEX = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x02, 0x78, 0x00, 0xFF};
-      |                                ^~~~
-../Core/Src/UDF_led_segment.c:18:32: note: (near initialization for 'LED_SEG_HEX')
-../Core/Src/UDF_led_segment.c:18:38: warning: excess elements in scalar initializer
-   18 | int LED_SEG_HEX = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x02, 0x78, 0x00, 0xFF};
-      |                                      ^~~~
-../Core/Src/UDF_led_segment.c:18:38: note: (near initialization for 'LED_SEG_HEX')
-../Core/Src/UDF_led_segment.c:18:44: warning: excess elements in scalar initializer
-   18 | int LED_SEG_HEX = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x02, 0x78, 0x00, 0xFF};
-      |                                            ^~~~
-../Core/Src/UDF_led_segment.c:18:44: note: (near initialization for 'LED_SEG_HEX')
-../Core/Src/UDF_led_segment.c:18:50: warning: excess elements in scalar initializer
-   18 | int LED_SEG_HEX = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x02, 0x78, 0x00, 0xFF};
-      |                                                  ^~~~
-../Core/Src/UDF_led_segment.c:18:50: note: (near initialization for 'LED_SEG_HEX')
-../Core/Src/UDF_led_segment.c:18:56: warning: excess elements in scalar initializer
-   18 | int LED_SEG_HEX = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x02, 0x78, 0x00, 0xFF};
-      |                                                        ^~~~
-../Core/Src/UDF_led_segment.c:18:56: note: (near initialization for 'LED_SEG_HEX')
-../Core/Src/UDF_led_segment.c:18:62: warning: excess elements in scalar initializer
-   18 | int LED_SEG_HEX = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x02, 0x78, 0x00, 0xFF};
-      |                                                              ^~~~
-../Core/Src/UDF_led_segment.c:18:62: note: (near initialization for 'LED_SEG_HEX')
-../Core/Src/UDF_led_segment.c:18:68: warning: excess elements in scalar initializer
-   18 | int LED_SEG_HEX = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x02, 0x78, 0x00, 0xFF};
-      |                                                                    ^~~~
-../Core/Src/UDF_led_segment.c:18:68: note: (near initialization for 'LED_SEG_HEX')
-../Core/Src/UDF_led_segment.c:18:74: warning: excess elements in scalar initializer
-   18 | int LED_SEG_HEX = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x02, 0x78, 0x00, 0xFF};
-      |                                                                          ^~~~
-../Core/Src/UDF_led_segment.c:18:74: note: (near initialization for 'LED_SEG_HEX')
+../Core/Src/UDF_button.c: In function 'init_button':
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:651:29: warning: initialization of 'GPIO_config *' {aka 'struct _GPIO_config *'} from incompatible pointer type 'GPIO_TypeDef *' {aka 'struct <anonymous> *'} [-Wincompatible-pointer-types]
+  651 | #define GPIOB               ((GPIO_TypeDef *)GPIOB_BASE)
+      |                             ^
+../Core/Inc/main.h:82:28: note: in expansion of macro 'GPIOB'
+   82 | #define BUTTON_1_GPIO_Port GPIOB
+      |                            ^~~~~
+../Core/Src/UDF_button.c:54:39: note: in expansion of macro 'BUTTON_1_GPIO_Port'
+   54 |  buttons[0].physical = (GPIO_config*){BUTTON_1_GPIO_Port, BUTTON_1_Pin};
+      |                                       ^~~~~~~~~~~~~~~~~~
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:651:29: note: (near initialization for '(anonymous)')
+  651 | #define GPIOB               ((GPIO_TypeDef *)GPIOB_BASE)
+      |                             ^
+../Core/Inc/main.h:82:28: note: in expansion of macro 'GPIOB'
+   82 | #define BUTTON_1_GPIO_Port GPIOB
+      |                            ^~~~~
+../Core/Src/UDF_button.c:54:39: note: in expansion of macro 'BUTTON_1_GPIO_Port'
+   54 |  buttons[0].physical = (GPIO_config*){BUTTON_1_GPIO_Port, BUTTON_1_Pin};
+      |                                       ^~~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:241,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Inc/UDF_global.h:11,
+                 from ../Core/Inc/UDF_button.h:12,
+                 from ../Core/Src/UDF_button.c:10:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:93:36: warning: excess elements in scalar initializer
+   93 | #define GPIO_PIN_11                ((uint16_t)0x0800)  /* Pin 11 selected   */
+      |                                    ^
+../Core/Inc/main.h:81:22: note: in expansion of macro 'GPIO_PIN_11'
+   81 | #define BUTTON_1_Pin GPIO_PIN_11
+      |                      ^~~~~~~~~~~
+../Core/Src/UDF_button.c:54:59: note: in expansion of macro 'BUTTON_1_Pin'
+   54 |  buttons[0].physical = (GPIO_config*){BUTTON_1_GPIO_Port, BUTTON_1_Pin};
+      |                                                           ^~~~~~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:93:36: note: (near initialization for '(anonymous)')
+   93 | #define GPIO_PIN_11                ((uint16_t)0x0800)  /* Pin 11 selected   */
+      |                                    ^
+../Core/Inc/main.h:81:22: note: in expansion of macro 'GPIO_PIN_11'
+   81 | #define BUTTON_1_Pin GPIO_PIN_11
+      |                      ^~~~~~~~~~~
+../Core/Src/UDF_button.c:54:59: note: in expansion of macro 'BUTTON_1_Pin'
+   54 |  buttons[0].physical = (GPIO_config*){BUTTON_1_GPIO_Port, BUTTON_1_Pin};
+      |                                                           ^~~~~~~~~~~~
 In file included from ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:128,
                  from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
                  from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
@@ -69,56 +65,50 @@ In file included from ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:1
                  from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
                  from ../Core/Inc/main.h:31,
                  from ../Core/Inc/UDF_global.h:11,
-                 from ../Core/Inc/UDF_led_segment.h:11,
-                 from ../Core/Src/UDF_led_segment.c:10:
-../Core/Src/UDF_led_segment.c: In function 'init_led_segment':
+                 from ../Core/Inc/UDF_button.h:12,
+                 from ../Core/Src/UDF_button.c:10:
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:651:29: warning: initialization of 'GPIO_config *' {aka 'struct _GPIO_config *'} from incompatible pointer type 'GPIO_TypeDef *' {aka 'struct <anonymous> *'} [-Wincompatible-pointer-types]
   651 | #define GPIOB               ((GPIO_TypeDef *)GPIOB_BASE)
       |                             ^
-../Core/Inc/main.h:96:28: note: in expansion of macro 'GPIOB'
-   96 | #define EN0_LEFT_GPIO_Port GPIOB
+../Core/Inc/main.h:84:28: note: in expansion of macro 'GPIOB'
+   84 | #define BUTTON_2_GPIO_Port GPIOB
       |                            ^~~~~
-../Core/Src/UDF_led_segment.c:29:64: note: in expansion of macro 'EN0_LEFT_GPIO_Port'
-   29 |  ledSegments[SIDE_A][LEFT].ledSegmentPhysical = (GPIO_config*){EN0_LEFT_GPIO_Port, EN0_LEFT_Pin};
-      |                                                                ^~~~~~~~~~~~~~~~~~
+../Core/Src/UDF_button.c:55:39: note: in expansion of macro 'BUTTON_2_GPIO_Port'
+   55 |  buttons[1].physical = (GPIO_config*){BUTTON_2_GPIO_Port, BUTTON_2_Pin};
+      |                                       ^~~~~~~~~~~~~~~~~~
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:651:29: note: (near initialization for '(anonymous)')
   651 | #define GPIOB               ((GPIO_TypeDef *)GPIOB_BASE)
       |                             ^
-../Core/Inc/main.h:96:28: note: in expansion of macro 'GPIOB'
-   96 | #define EN0_LEFT_GPIO_Port GPIOB
+../Core/Inc/main.h:84:28: note: in expansion of macro 'GPIOB'
+   84 | #define BUTTON_2_GPIO_Port GPIOB
       |                            ^~~~~
-../Core/Src/UDF_led_segment.c:29:64: note: in expansion of macro 'EN0_LEFT_GPIO_Port'
-   29 |  ledSegments[SIDE_A][LEFT].ledSegmentPhysical = (GPIO_config*){EN0_LEFT_GPIO_Port, EN0_LEFT_Pin};
-      |                                                                ^~~~~~~~~~~~~~~~~~
+../Core/Src/UDF_button.c:55:39: note: in expansion of macro 'BUTTON_2_GPIO_Port'
+   55 |  buttons[1].physical = (GPIO_config*){BUTTON_2_GPIO_Port, BUTTON_2_Pin};
+      |                                       ^~~~~~~~~~~~~~~~~~
 In file included from ../Core/Inc/stm32f1xx_hal_conf.h:241,
                  from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
                  from ../Core/Inc/main.h:31,
                  from ../Core/Inc/UDF_global.h:11,
-                 from ../Core/Inc/UDF_led_segment.h:11,
-                 from ../Core/Src/UDF_led_segment.c:10:
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:89:36: warning: excess elements in scalar initializer
-   89 | #define GPIO_PIN_7                 ((uint16_t)0x0080)  /* Pin 7 selected    */
+                 from ../Core/Inc/UDF_button.h:12,
+                 from ../Core/Src/UDF_button.c:10:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:94:36: warning: excess elements in scalar initializer
+   94 | #define GPIO_PIN_12                ((uint16_t)0x1000)  /* Pin 12 selected   */
       |                                    ^
-../Core/Inc/main.h:95:22: note: in expansion of macro 'GPIO_PIN_7'
-   95 | #define EN0_LEFT_Pin GPIO_PIN_7
-      |                      ^~~~~~~~~~
-../Core/Src/UDF_led_segment.c:29:84: note: in expansion of macro 'EN0_LEFT_Pin'
-   29 |  ledSegments[SIDE_A][LEFT].ledSegmentPhysical = (GPIO_config*){EN0_LEFT_GPIO_Port, EN0_LEFT_Pin};
-      |                                                                                    ^~~~~~~~~~~~
-In file included from ../Core/Inc/UDF_timer.h:12,
-                 from ../Core/Src/UDF_timer.c:10:
-../Core/Inc/UDF_global.h:32:69: warning: useless storage class specifier in empty declaration
-   32 | typedef enum {TIMER_BUTTON, TIMER_LED_INDICATOR, TIMER_LED_SEGMENT, TIMER_SECOND};
-      |                                                                     ^~~~~~~~~~~~
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:89:36: note: (near initialization for '(anonymous)')
-   89 | #define GPIO_PIN_7                 ((uint16_t)0x0080)  /* Pin 7 selected    */
+../Core/Inc/main.h:83:22: note: in expansion of macro 'GPIO_PIN_12'
+   83 | #define BUTTON_2_Pin GPIO_PIN_12
+      |                      ^~~~~~~~~~~
+../Core/Src/UDF_button.c:55:59: note: in expansion of macro 'BUTTON_2_Pin'
+   55 |  buttons[1].physical = (GPIO_config*){BUTTON_2_GPIO_Port, BUTTON_2_Pin};
+      |                                                           ^~~~~~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:94:36: note: (near initialization for '(anonymous)')
+   94 | #define GPIO_PIN_12                ((uint16_t)0x1000)  /* Pin 12 selected   */
       |                                    ^
-../Core/Inc/main.h:95:22: note: in expansion of macro 'GPIO_PIN_7'
-   95 | #define EN0_LEFT_Pin GPIO_PIN_7
-      |                      ^~~~~~~~~~
-../Core/Src/UDF_led_segment.c:29:84: note: in expansion of macro 'EN0_LEFT_Pin'
-   29 |  ledSegments[SIDE_A][LEFT].ledSegmentPhysical = (GPIO_config*){EN0_LEFT_GPIO_Port, EN0_LEFT_Pin};
-      |                                                                                    ^~~~~~~~~~~~
+../Core/Inc/main.h:83:22: note: in expansion of macro 'GPIO_PIN_12'
+   83 | #define BUTTON_2_Pin GPIO_PIN_12
+      |                      ^~~~~~~~~~~
+../Core/Src/UDF_button.c:55:59: note: in expansion of macro 'BUTTON_2_Pin'
+   55 |  buttons[1].physical = (GPIO_config*){BUTTON_2_GPIO_Port, BUTTON_2_Pin};
+      |                                                           ^~~~~~~~~~~~
 In file included from ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:128,
                  from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
                  from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
@@ -126,191 +116,67 @@ In file included from ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:1
                  from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
                  from ../Core/Inc/main.h:31,
                  from ../Core/Inc/UDF_global.h:11,
-                 from ../Core/Inc/UDF_led_segment.h:11,
-                 from ../Core/Src/UDF_led_segment.c:10:
+                 from ../Core/Inc/UDF_button.h:12,
+                 from ../Core/Src/UDF_button.c:10:
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:651:29: warning: initialization of 'GPIO_config *' {aka 'struct _GPIO_config *'} from incompatible pointer type 'GPIO_TypeDef *' {aka 'struct <anonymous> *'} [-Wincompatible-pointer-types]
   651 | #define GPIOB               ((GPIO_TypeDef *)GPIOB_BASE)
       |                             ^
-../Core/Inc/main.h:98:29: note: in expansion of macro 'GPIOB'
-   98 | #define EN0_RIGHT_GPIO_Port GPIOB
-      |                             ^~~~~
-../Core/Src/UDF_led_segment.c:30:65: note: in expansion of macro 'EN0_RIGHT_GPIO_Port'
-   30 |  ledSegments[SIDE_A][RIGHT].ledSegmentPhysical = (GPIO_config*){EN0_RIGHT_GPIO_Port, EN0_RIGHT_Pin};
-      |                                                                 ^~~~~~~~~~~~~~~~~~~
-../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:651:29: note: (near initialization for '(anonymous)')
-  651 | #define GPIOB               ((GPIO_TypeDef *)GPIOB_BASE)
-      |                             ^
-../Core/Inc/main.h:98:29: note: in expansion of macro 'GPIOB'
-   98 | #define EN0_RIGHT_GPIO_Port GPIOB
-      |                             ^~~~~
-../Core/Src/UDF_led_segment.c:30:65: note: in expansion of macro 'EN0_RIGHT_GPIO_Port'
-   30 |  ledSegments[SIDE_A][RIGHT].ledSegmentPhysical = (GPIO_config*){EN0_RIGHT_GPIO_Port, EN0_RIGHT_Pin};
-      |                                                                 ^~~~~~~~~~~~~~~~~~~
-In file included from ../Core/Inc/stm32f1xx_hal_conf.h:241,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
-                 from ../Core/Inc/main.h:31,
-                 from ../Core/Inc/UDF_global.h:11,
-                 from ../Core/Inc/UDF_led_segment.h:11,
-                 from ../Core/Src/UDF_led_segment.c:10:
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:90:36: warning: excess elements in scalar initializer
-   90 | #define GPIO_PIN_8                 ((uint16_t)0x0100)  /* Pin 8 selected    */
-      |                                    ^
-../Core/Inc/main.h:97:23: note: in expansion of macro 'GPIO_PIN_8'
-   97 | #define EN0_RIGHT_Pin GPIO_PIN_8
-      |                       ^~~~~~~~~~
-../Core/Src/UDF_led_segment.c:30:86: note: in expansion of macro 'EN0_RIGHT_Pin'
-   30 |  ledSegments[SIDE_A][RIGHT].ledSegmentPhysical = (GPIO_config*){EN0_RIGHT_GPIO_Port, EN0_RIGHT_Pin};
-      |                                                                                      ^~~~~~~~~~~~~
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:90:36: note: (near initialization for '(anonymous)')
-   90 | #define GPIO_PIN_8                 ((uint16_t)0x0100)  /* Pin 8 selected    */
-      |                                    ^
-../Core/Inc/main.h:97:23: note: in expansion of macro 'GPIO_PIN_8'
-   97 | #define EN0_RIGHT_Pin GPIO_PIN_8
-      |                       ^~~~~~~~~~
-../Core/Src/UDF_led_segment.c:30:86: note: in expansion of macro 'EN0_RIGHT_Pin'
-   30 |  ledSegments[SIDE_A][RIGHT].ledSegmentPhysical = (GPIO_config*){EN0_RIGHT_GPIO_Port, EN0_RIGHT_Pin};
-      |                                                                                      ^~~~~~~~~~~~~
-In file included from ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:128,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
-                 from ../Core/Inc/stm32f1xx_hal_conf.h:237,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
-                 from ../Core/Inc/main.h:31,
-                 from ../Core/Inc/UDF_global.h:11,
-                 from ../Core/Inc/UDF_led_segment.h:11,
-                 from ../Core/Src/UDF_led_segment.c:10:
-../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:651:29: warning: initialization of 'GPIO_config *' {aka 'struct _GPIO_config *'} from incompatible pointer type 'GPIO_TypeDef *' {aka 'struct <anonymous> *'} [-Wincompatible-pointer-types]
-  651 | #define GPIOB               ((GPIO_TypeDef *)GPIOB_BASE)
-      |                             ^
-../Core/Inc/main.h:100:28: note: in expansion of macro 'GPIOB'
-  100 | #define EN1_LEFT_GPIO_Port GPIOB
+../Core/Inc/main.h:86:28: note: in expansion of macro 'GPIOB'
+   86 | #define BUTTON_3_GPIO_Port GPIOB
       |                            ^~~~~
-../Core/Src/UDF_led_segment.c:31:64: note: in expansion of macro 'EN1_LEFT_GPIO_Port'
-   31 |  ledSegments[SIDE_B][LEFT].ledSegmentPhysical = (GPIO_config*){EN1_LEFT_GPIO_Port, EN1_LEFT_Pin};
-      |                                                                ^~~~~~~~~~~~~~~~~~
-In file included from ../Core/Inc/UDF_button.h:12,
-                 from ../Core/Inc/UDF_traffic_light.h:11,
-                 from ../Core/Src/UDF_traffic_light.c:10:
-../Core/Inc/UDF_global.h:32:69: warning: useless storage class specifier in empty declaration
-   32 | typedef enum {TIMER_BUTTON, TIMER_LED_INDICATOR, TIMER_LED_SEGMENT, TIMER_SECOND};
-      |                                                                     ^~~~~~~~~~~~
+../Core/Src/UDF_button.c:56:39: note: in expansion of macro 'BUTTON_3_GPIO_Port'
+   56 |  buttons[2].physical = (GPIO_config*){BUTTON_3_GPIO_Port, BUTTON_3_Pin};
+      |                                       ^~~~~~~~~~~~~~~~~~
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:651:29: note: (near initialization for '(anonymous)')
   651 | #define GPIOB               ((GPIO_TypeDef *)GPIOB_BASE)
       |                             ^
-../Core/Inc/main.h:100:28: note: in expansion of macro 'GPIOB'
-  100 | #define EN1_LEFT_GPIO_Port GPIOB
+../Core/Inc/main.h:86:28: note: in expansion of macro 'GPIOB'
+   86 | #define BUTTON_3_GPIO_Port GPIOB
       |                            ^~~~~
-../Core/Src/UDF_led_segment.c:31:64: note: in expansion of macro 'EN1_LEFT_GPIO_Port'
-   31 |  ledSegments[SIDE_B][LEFT].ledSegmentPhysical = (GPIO_config*){EN1_LEFT_GPIO_Port, EN1_LEFT_Pin};
-      |                                                                ^~~~~~~~~~~~~~~~~~
+../Core/Src/UDF_button.c:56:39: note: in expansion of macro 'BUTTON_3_GPIO_Port'
+   56 |  buttons[2].physical = (GPIO_config*){BUTTON_3_GPIO_Port, BUTTON_3_Pin};
+      |                                       ^~~~~~~~~~~~~~~~~~
 In file included from ../Core/Inc/stm32f1xx_hal_conf.h:241,
                  from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
                  from ../Core/Inc/main.h:31,
                  from ../Core/Inc/UDF_global.h:11,
-                 from ../Core/Inc/UDF_led_segment.h:11,
-                 from ../Core/Src/UDF_led_segment.c:10:
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:91:36: warning: excess elements in scalar initializer
-   91 | #define GPIO_PIN_9                 ((uint16_t)0x0200)  /* Pin 9 selected    */
+                 from ../Core/Inc/UDF_button.h:12,
+                 from ../Core/Src/UDF_button.c:10:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:95:36: warning: excess elements in scalar initializer
+   95 | #define GPIO_PIN_13                ((uint16_t)0x2000)  /* Pin 13 selected   */
       |                                    ^
-../Core/Inc/main.h:99:22: note: in expansion of macro 'GPIO_PIN_9'
-   99 | #define EN1_LEFT_Pin GPIO_PIN_9
-      |                      ^~~~~~~~~~
-../Core/Src/UDF_led_segment.c:31:84: note: in expansion of macro 'EN1_LEFT_Pin'
-   31 |  ledSegments[SIDE_B][LEFT].ledSegmentPhysical = (GPIO_config*){EN1_LEFT_GPIO_Port, EN1_LEFT_Pin};
-      |                                                                                    ^~~~~~~~~~~~
-In file included from ../Core/Inc/UDF_led_indicator.h:11,
-                 from ../Core/Src/main.c:25:
-../Core/Inc/UDF_global.h:32:69: warning: useless storage class specifier in empty declaration
-   32 | typedef enum {TIMER_BUTTON, TIMER_LED_INDICATOR, TIMER_LED_SEGMENT, TIMER_SECOND};
-      |                                                                     ^~~~~~~~~~~~
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:91:36: note: (near initialization for '(anonymous)')
-   91 | #define GPIO_PIN_9                 ((uint16_t)0x0200)  /* Pin 9 selected    */
+../Core/Inc/main.h:85:22: note: in expansion of macro 'GPIO_PIN_13'
+   85 | #define BUTTON_3_Pin GPIO_PIN_13
+      |                      ^~~~~~~~~~~
+../Core/Src/UDF_button.c:56:59: note: in expansion of macro 'BUTTON_3_Pin'
+   56 |  buttons[2].physical = (GPIO_config*){BUTTON_3_GPIO_Port, BUTTON_3_Pin};
+      |                                                           ^~~~~~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:95:36: note: (near initialization for '(anonymous)')
+   95 | #define GPIO_PIN_13                ((uint16_t)0x2000)  /* Pin 13 selected   */
       |                                    ^
-../Core/Inc/main.h:99:22: note: in expansion of macro 'GPIO_PIN_9'
-   99 | #define EN1_LEFT_Pin GPIO_PIN_9
-      |                      ^~~~~~~~~~
-../Core/Src/UDF_led_segment.c:31:84: note: in expansion of macro 'EN1_LEFT_Pin'
-   31 |  ledSegments[SIDE_B][LEFT].ledSegmentPhysical = (GPIO_config*){EN1_LEFT_GPIO_Port, EN1_LEFT_Pin};
-      |                                                                                    ^~~~~~~~~~~~
-In file included from ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:128,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
-                 from ../Core/Inc/stm32f1xx_hal_conf.h:237,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
-                 from ../Core/Inc/main.h:31,
-                 from ../Core/Inc/UDF_global.h:11,
-                 from ../Core/Inc/UDF_led_segment.h:11,
-                 from ../Core/Src/UDF_led_segment.c:10:
-../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:651:29: warning: initialization of 'GPIO_config *' {aka 'struct _GPIO_config *'} from incompatible pointer type 'GPIO_TypeDef *' {aka 'struct <anonymous> *'} [-Wincompatible-pointer-types]
-  651 | #define GPIOB               ((GPIO_TypeDef *)GPIOB_BASE)
-      |                             ^
-../Core/Inc/main.h:80:29: note: in expansion of macro 'GPIOB'
-   80 | #define EN1_RIGHT_GPIO_Port GPIOB
-      |                             ^~~~~
-../Core/Src/UDF_led_segment.c:32:65: note: in expansion of macro 'EN1_RIGHT_GPIO_Port'
-   32 |  ledSegments[SIDE_B][RIGHT].ledSegmentPhysical = (GPIO_config*){EN1_RIGHT_GPIO_Port, EN1_RIGHT_Pin};
-      |                                                                 ^~~~~~~~~~~~~~~~~~~
-../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:651:29: note: (near initialization for '(anonymous)')
-  651 | #define GPIOB               ((GPIO_TypeDef *)GPIOB_BASE)
-      |                             ^
-../Core/Inc/main.h:80:29: note: in expansion of macro 'GPIOB'
-   80 | #define EN1_RIGHT_GPIO_Port GPIOB
-      |                             ^~~~~
-../Core/Src/UDF_led_segment.c:32:65: note: in expansion of macro 'EN1_RIGHT_GPIO_Port'
-   32 |  ledSegments[SIDE_B][RIGHT].ledSegmentPhysical = (GPIO_config*){EN1_RIGHT_GPIO_Port, EN1_RIGHT_Pin};
-      |                                                                 ^~~~~~~~~~~~~~~~~~~
-In file included from ../Core/Inc/stm32f1xx_hal_conf.h:241,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
-                 from ../Core/Inc/main.h:31,
-                 from ../Core/Inc/UDF_global.h:11,
-                 from ../Core/Inc/UDF_led_segment.h:11,
-                 from ../Core/Src/UDF_led_segment.c:10:
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:92:36: warning: excess elements in scalar initializer
-   92 | #define GPIO_PIN_10                ((uint16_t)0x0400)  /* Pin 10 selected   */
-      |                                    ^
-../Core/Inc/main.h:79:23: note: in expansion of macro 'GPIO_PIN_10'
-   79 | #define EN1_RIGHT_Pin GPIO_PIN_10
-      |                       ^~~~~~~~~~~
-../Core/Src/UDF_led_segment.c:32:86: note: in expansion of macro 'EN1_RIGHT_Pin'
-   32 |  ledSegments[SIDE_B][RIGHT].ledSegmentPhysical = (GPIO_config*){EN1_RIGHT_GPIO_Port, EN1_RIGHT_Pin};
-      |                                                                                      ^~~~~~~~~~~~~
-../Core/Src/main.c: In function 'main':
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:92:36: note: (near initialization for '(anonymous)')
-   92 | #define GPIO_PIN_10                ((uint16_t)0x0400)  /* Pin 10 selected   */
-      |                                    ^
-../Core/Inc/main.h:79:23: note: in expansion of macro 'GPIO_PIN_10'
-   79 | #define EN1_RIGHT_Pin GPIO_PIN_10
-      |                       ^~~~~~~~~~~
-../Core/Src/UDF_led_segment.c:32:86: note: in expansion of macro 'EN1_RIGHT_Pin'
-   32 |  ledSegments[SIDE_B][RIGHT].ledSegmentPhysical = (GPIO_config*){EN1_RIGHT_GPIO_Port, EN1_RIGHT_Pin};
-      |                                                                                      ^~~~~~~~~~~~~
-../Core/Src/main.c:87:3: warning: implicit declaration of function 'init_led_segment' [-Wimplicit-function-declaration]
-   87 |   init_led_segment();
-      |   ^~~~~~~~~~~~~~~~
-At top level:
-../Core/Src/UDF_led_segment.c:22:12: warning: 'currentEnabledLedSegment' defined but not used [-Wunused-variable]
-   22 | static int currentEnabledLedSegment = 0;
-      |            ^~~~~~~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:88:3: warning: implicit declaration of function 'init_timer' [-Wimplicit-function-declaration]
-   88 |   init_timer();
-      |   ^~~~~~~~~~
+../Core/Inc/main.h:85:22: note: in expansion of macro 'GPIO_PIN_13'
+   85 | #define BUTTON_3_Pin GPIO_PIN_13
+      |                      ^~~~~~~~~~~
+../Core/Src/UDF_button.c:56:59: note: in expansion of macro 'BUTTON_3_Pin'
+   56 |  buttons[2].physical = (GPIO_config*){BUTTON_3_GPIO_Port, BUTTON_3_Pin};
+      |                                                           ^~~~~~~~~~~~
 arm-none-eabi-gcc -o "Button.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Button\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Button.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Button.elf
  
 arm-none-eabi-size   Button.elf 
 arm-none-eabi-objdump -h -S  Button.elf  > "Button.list"
 arm-none-eabi-objcopy  -O ihex  Button.elf  "Button.hex"
-arm-none-eabi-objcopy  -O binary  Button.elf  "Button.bin"
    text	   data	    bss	    dec	    hex	filename
-   7744	     20	   2188	   9952	   26e0	Button.elf
+   7856	     64	   2096	  10016	   2720	Button.elf
+arm-none-eabi-objcopy  -O binary  Button.elf  "Button.bin"
 Finished building: default.size.stdout
-Finished building: Button.hex
+ 
 Finished building: Button.list
+Finished building: Button.hex
 Finished building: Button.bin
  
  
  
- 
 
-11:17:12 Build Finished. 0 errors, 27 warnings. (took 1s.228ms)
+18:14:20 Build Finished. 0 errors, 6 warnings. (took 1s.78ms)
 

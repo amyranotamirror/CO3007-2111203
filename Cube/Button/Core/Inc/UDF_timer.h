@@ -15,7 +15,7 @@
 #define NUM_TIMER 4
 #define INTERRUPT_DURATION_MS 10		// Internal interrupt
 #define LED_INDICATOR_DURATION_MS 250 	// LED indicator
-#define LED_SEGMENT_DURATION_MS 10		// LED segment
+#define LED_SEGMENT_DURATION_MS 40		// LED segment
 #define SECOND_DURATION_MS 1000			// Clock in second
 #define BUTTON_DURATION_MIN 10			// Min response time
 #define BUTTON_DURATION_MAX 50			// Max response time
@@ -26,6 +26,7 @@ typedef struct{
 	int flag;
 }timer;
 timer timers[NUM_TIMER];
+
 /* Public function declaration */
 void init_timer();
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);

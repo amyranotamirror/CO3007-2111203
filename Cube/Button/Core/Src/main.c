@@ -22,7 +22,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "UDF_led_indicator.h"
+#include "UDF_traffic_light.h"
+#include "UDF_timer.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -82,17 +83,15 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-  HAL_TIM_Base_Start_IT(&htim2);
-  init_led_indicator();
-  init_led_segment();
-  init_timer();
+
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-
+  HAL_TIM_Base_Start_IT(&htim2);
+  init_fsm_traffic_light_system();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -100,7 +99,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  display_led_indicator(SIDE_A, RED);
+	  fsm_traffic_light_system();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

@@ -1,3 +1,5 @@
-UDF_led_indicator.c:15:6:reset_led_indicator	24	static
-UDF_led_indicator.c:24:6:init_led_indicator	56	static
-UDF_led_indicator.c:35:6:display_led_indicator	32	static
+UDF_led_indicator.c:16:6:turn_all_led_indicator_off	24	static
+UDF_led_indicator.c:23:6:turn_all_led_indicator_on	24	static
+UDF_led_indicator.c:32:6:init_led_indicator	56	static
+UDF_led_indicator.c:43:6:display_led_indicator	32	static
+UDF_led_indicator.c:53:6:blink_all_led	8	static

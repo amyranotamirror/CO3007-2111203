@@ -9,10 +9,12 @@
 #define INC_UDF_LED_SEGMENT_H_
 /* Import library */
 #include "UDF_global.h"
+#include "UDF_timer.h"
 /* Public variables declaration */
 
 /* Public function declaration */
 void init_led_segment();
+void display_led_segment();
 void modify_led_segment_buffer(TRAFFIC_LIGHT_SIDE trafficSide, uint16_t number);
 
 
