@@ -10,14 +10,12 @@
 #include "UDF_led_indicator.h"
 /* Private variables declaration */
 GPIO_config ledIndicatorPhysical[NUM_SIDE][NUM_COLOR];
-GPIO_PinState TURN_OFF = GPIO_PIN_SET;
-GPIO_PinState TURN_ON = GPIO_PIN_RESET;
 
 /* Private function  */
 void reset_led_indicator(){
 	for(uint16_t side = 0; side < NUM_SIDE; side++){
 		for(uint16_t color = 0; color < NUM_COLOR; color++){
-			HAL_GPIO_WritePin(ledIndicatorArray[side][color].port, ledIndicatorArray[side][color].pin, TURN_OFF);
+			HAL_GPIO_WritePin(ledIndicatorPhysical[side][color].port, ledIndicatorPhysical[side][color].pin, TURN_OFF);
 		}
 	}
 }
@@ -39,10 +37,10 @@ void display_led_indicator(TRAFFIC_LIGHT_SIDE trafficSide, TRAFFIC_LIGHT_COLOR t
 	for(uint16_t side = 0; side < NUM_SIDE; side++){
 		for(uint16_t color = 0; color < NUM_COLOR; color++){
 			if(side == trafficSide && color == trafficColor){
-				HAL_GPIO_WritePin(ledIndicatorArray[side][color].port, ledIndicatorArray[side][color].pin, TURN_ON);
+				HAL_GPIO_WritePin(ledIndicatorPhysical[side][color].port, ledIndicatorPhysical[side][color].pin, TURN_ON);
 				continue;
 			}
-			HAL_GPIO_WritePin(ledIndicatorArray[side][color].port, ledIndicatorArray[side][color].pin, TURN_OFF);
+			HAL_GPIO_WritePin(ledIndicatorPhysical[side][color].port, ledIndicatorPhysical[side][color].pin, TURN_OFF);
 		}
 	}
 }

@@ -1,0 +1,60 @@
+/*
+ * UDF_timer.c
+ *
+ *  Created on: Nov 13, 2023
+ *      Author: Amyra Nguyen
+ */
+
+
+/* Import library */
+#include "UDF_timer.h"
+/* Private variables declaration */
+#define LED_INDICATOR_DURATION_MS 250 	// LED indicator
+#define LED_SEGMENT_DURATION_MS 10		// LED segment
+#define SECOND_DURATION_MS 1000			// Clock in second
+#define BUTTON_DURATION_MIN 10
+#define BUTTON_DURATION_MAX 50
+static int buttonSampleRate = 1;
+/* Private function  */
+int calculate_button_sample_rate(){
+	/* Directly modify: button sample rate
+	 * Output: button sample limit */
+
+	/* Invalid range of timer */
+	if(TIMER_INTERRUPT_DURATION_MS >= 50)
+		return 0;
+
+	// Interrupt duration is: > 10ms and < 50ms
+	if(TIMER_INTERRUPT_DURATION_MS > BUTTON_DURATION_MIN && TIMER_INTERRUPT_DURATION_MS < BUTTON_DURATION_MAX)
+		return BUTTON_DURATION_MAX / TIMER_INTERRUPT_DURATION_MS;
+
+	// Interrupt duration is: < 10ms
+	buttonSampleRate = (BUTTON_DURATION_MIN / TIMER_INTERRUPT_DURATION_MS) + 1;
+	int sampleLimit = buttonSampleRate;
+	while(sampleLimit * TIMER_INTERRUPT_DURATION_MS < BUTTON_DURATION_MAX)
+		sampleLimit += buttonSampleRate;
+	return sampleLimit / buttonSampleRate;
+}
+
+/* Public function  */
+void init_timer(){
+	buttonSampleLimit = calculate_button_sample_limit();
+	for(uint16_t timer = 0; timer < NUM_TIMER; timer++){
+		timers[timer].counter = 0;
+		timers[timer].flag = 0;
+	}
+	timers[TIMER_BUTTON].limit = buttonSampleRate;
+	timers[TIMER_LED_INDICATOR].limit = LED_INDICATOR_DURATION_MS / TIMER_INTERRUPT_DURATION_MS;
+	timers[TIMER_LED_SEGMENT].limit = LED_SEGMENT_DURATION_MS / TIMER_INTERRUPT_DURATION_MS;
+	timers[TIMER_LED_SEGMENT].limit = SECOND_DURATION_MS / TIMER_INTERRUPT_DURATION_MS;
+}
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
+	/* Only use timer to set flag and reset counter */
+	for(uint16_t timer = 0; timer < NUM_TIMER; timer++){
+		if(timers[timer].counter >= timers[timer].limit){
+			timers[timer].flag = 1;
+			timers[timer].counter = 0;
+		}
+	}
+}

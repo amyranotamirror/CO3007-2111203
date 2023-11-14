@@ -84,6 +84,8 @@ int main(void)
   /* USER CODE BEGIN SysInit */
   HAL_TIM_Base_Start_IT(&htim2);
   init_led_indicator();
+  init_led_segment();
+  init_timer();
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */

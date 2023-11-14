@@ -1,7 +1,7 @@
 Core/Src/UDF_traffic_light.o: ../Core/Src/UDF_traffic_light.c \
  ../Core/Inc/UDF_traffic_light.h ../Core/Inc/UDF_button.h \
- ../Core/Inc/UDF_led_indicator.h ../Core/Inc/UDF_global.h \
- ../Core/Inc/main.h ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
+ ../Core/Inc/UDF_global.h ../Core/Inc/main.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
@@ -25,13 +25,12 @@ Core/Src/UDF_traffic_light.o: ../Core/Src/UDF_traffic_light.c \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
- ../Core/Inc/UDF_led_segment.h ../Core/Inc/UDF_timer.h
+ ../Core/Inc/UDF_timer.h ../Core/Inc/UDF_led_indicator.h \
+ ../Core/Inc/UDF_led_segment.h
 
 ../Core/Inc/UDF_traffic_light.h:
 
 ../Core/Inc/UDF_button.h:
-
-../Core/Inc/UDF_led_indicator.h:
 
 ../Core/Inc/UDF_global.h:
 
@@ -85,6 +84,8 @@ Core/Src/UDF_traffic_light.o: ../Core/Src/UDF_traffic_light.c \
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 
-../Core/Inc/UDF_led_segment.h:
-
 ../Core/Inc/UDF_timer.h:
+
+../Core/Inc/UDF_led_indicator.h:
+
+../Core/Inc/UDF_led_segment.h:
