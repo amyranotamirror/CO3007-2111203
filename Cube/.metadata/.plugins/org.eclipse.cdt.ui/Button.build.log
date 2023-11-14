@@ -1,182 +1,27 @@
-18:14:19 **** Incremental Build of configuration Debug for project Button ****
+20:21:14 **** Incremental Build of configuration Debug for project Button ****
 make -j12 all 
-arm-none-eabi-gcc "../Core/Src/UDF_button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/UDF_button.d" -MT"Core/Src/UDF_button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/UDF_button.o"
-arm-none-eabi-gcc "../Core/Src/UDF_led_indicator.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/UDF_led_indicator.d" -MT"Core/Src/UDF_led_indicator.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/UDF_led_indicator.o"
-arm-none-eabi-gcc "../Core/Src/UDF_led_segment.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/UDF_led_segment.d" -MT"Core/Src/UDF_led_segment.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/UDF_led_segment.o"
-arm-none-eabi-gcc "../Core/Src/UDF_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/UDF_timer.d" -MT"Core/Src/UDF_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/UDF_timer.o"
 arm-none-eabi-gcc "../Core/Src/UDF_traffic_light.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/UDF_traffic_light.d" -MT"Core/Src/UDF_traffic_light.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/UDF_traffic_light.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-In file included from ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:128,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
-                 from ../Core/Inc/stm32f1xx_hal_conf.h:237,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
-                 from ../Core/Inc/main.h:31,
-                 from ../Core/Inc/UDF_global.h:11,
-                 from ../Core/Inc/UDF_button.h:12,
-                 from ../Core/Src/UDF_button.c:10:
-../Core/Src/UDF_button.c: In function 'init_button':
-../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:651:29: warning: initialization of 'GPIO_config *' {aka 'struct _GPIO_config *'} from incompatible pointer type 'GPIO_TypeDef *' {aka 'struct <anonymous> *'} [-Wincompatible-pointer-types]
-  651 | #define GPIOB               ((GPIO_TypeDef *)GPIOB_BASE)
-      |                             ^
-../Core/Inc/main.h:82:28: note: in expansion of macro 'GPIOB'
-   82 | #define BUTTON_1_GPIO_Port GPIOB
-      |                            ^~~~~
-../Core/Src/UDF_button.c:54:39: note: in expansion of macro 'BUTTON_1_GPIO_Port'
-   54 |  buttons[0].physical = (GPIO_config*){BUTTON_1_GPIO_Port, BUTTON_1_Pin};
-      |                                       ^~~~~~~~~~~~~~~~~~
-../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:651:29: note: (near initialization for '(anonymous)')
-  651 | #define GPIOB               ((GPIO_TypeDef *)GPIOB_BASE)
-      |                             ^
-../Core/Inc/main.h:82:28: note: in expansion of macro 'GPIOB'
-   82 | #define BUTTON_1_GPIO_Port GPIOB
-      |                            ^~~~~
-../Core/Src/UDF_button.c:54:39: note: in expansion of macro 'BUTTON_1_GPIO_Port'
-   54 |  buttons[0].physical = (GPIO_config*){BUTTON_1_GPIO_Port, BUTTON_1_Pin};
-      |                                       ^~~~~~~~~~~~~~~~~~
-In file included from ../Core/Inc/stm32f1xx_hal_conf.h:241,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
-                 from ../Core/Inc/main.h:31,
-                 from ../Core/Inc/UDF_global.h:11,
-                 from ../Core/Inc/UDF_button.h:12,
-                 from ../Core/Src/UDF_button.c:10:
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:93:36: warning: excess elements in scalar initializer
-   93 | #define GPIO_PIN_11                ((uint16_t)0x0800)  /* Pin 11 selected   */
-      |                                    ^
-../Core/Inc/main.h:81:22: note: in expansion of macro 'GPIO_PIN_11'
-   81 | #define BUTTON_1_Pin GPIO_PIN_11
-      |                      ^~~~~~~~~~~
-../Core/Src/UDF_button.c:54:59: note: in expansion of macro 'BUTTON_1_Pin'
-   54 |  buttons[0].physical = (GPIO_config*){BUTTON_1_GPIO_Port, BUTTON_1_Pin};
-      |                                                           ^~~~~~~~~~~~
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:93:36: note: (near initialization for '(anonymous)')
-   93 | #define GPIO_PIN_11                ((uint16_t)0x0800)  /* Pin 11 selected   */
-      |                                    ^
-../Core/Inc/main.h:81:22: note: in expansion of macro 'GPIO_PIN_11'
-   81 | #define BUTTON_1_Pin GPIO_PIN_11
-      |                      ^~~~~~~~~~~
-../Core/Src/UDF_button.c:54:59: note: in expansion of macro 'BUTTON_1_Pin'
-   54 |  buttons[0].physical = (GPIO_config*){BUTTON_1_GPIO_Port, BUTTON_1_Pin};
-      |                                                           ^~~~~~~~~~~~
-In file included from ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:128,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
-                 from ../Core/Inc/stm32f1xx_hal_conf.h:237,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
-                 from ../Core/Inc/main.h:31,
-                 from ../Core/Inc/UDF_global.h:11,
-                 from ../Core/Inc/UDF_button.h:12,
-                 from ../Core/Src/UDF_button.c:10:
-../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:651:29: warning: initialization of 'GPIO_config *' {aka 'struct _GPIO_config *'} from incompatible pointer type 'GPIO_TypeDef *' {aka 'struct <anonymous> *'} [-Wincompatible-pointer-types]
-  651 | #define GPIOB               ((GPIO_TypeDef *)GPIOB_BASE)
-      |                             ^
-../Core/Inc/main.h:84:28: note: in expansion of macro 'GPIOB'
-   84 | #define BUTTON_2_GPIO_Port GPIOB
-      |                            ^~~~~
-../Core/Src/UDF_button.c:55:39: note: in expansion of macro 'BUTTON_2_GPIO_Port'
-   55 |  buttons[1].physical = (GPIO_config*){BUTTON_2_GPIO_Port, BUTTON_2_Pin};
-      |                                       ^~~~~~~~~~~~~~~~~~
-../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:651:29: note: (near initialization for '(anonymous)')
-  651 | #define GPIOB               ((GPIO_TypeDef *)GPIOB_BASE)
-      |                             ^
-../Core/Inc/main.h:84:28: note: in expansion of macro 'GPIOB'
-   84 | #define BUTTON_2_GPIO_Port GPIOB
-      |                            ^~~~~
-../Core/Src/UDF_button.c:55:39: note: in expansion of macro 'BUTTON_2_GPIO_Port'
-   55 |  buttons[1].physical = (GPIO_config*){BUTTON_2_GPIO_Port, BUTTON_2_Pin};
-      |                                       ^~~~~~~~~~~~~~~~~~
-In file included from ../Core/Inc/stm32f1xx_hal_conf.h:241,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
-                 from ../Core/Inc/main.h:31,
-                 from ../Core/Inc/UDF_global.h:11,
-                 from ../Core/Inc/UDF_button.h:12,
-                 from ../Core/Src/UDF_button.c:10:
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:94:36: warning: excess elements in scalar initializer
-   94 | #define GPIO_PIN_12                ((uint16_t)0x1000)  /* Pin 12 selected   */
-      |                                    ^
-../Core/Inc/main.h:83:22: note: in expansion of macro 'GPIO_PIN_12'
-   83 | #define BUTTON_2_Pin GPIO_PIN_12
-      |                      ^~~~~~~~~~~
-../Core/Src/UDF_button.c:55:59: note: in expansion of macro 'BUTTON_2_Pin'
-   55 |  buttons[1].physical = (GPIO_config*){BUTTON_2_GPIO_Port, BUTTON_2_Pin};
-      |                                                           ^~~~~~~~~~~~
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:94:36: note: (near initialization for '(anonymous)')
-   94 | #define GPIO_PIN_12                ((uint16_t)0x1000)  /* Pin 12 selected   */
-      |                                    ^
-../Core/Inc/main.h:83:22: note: in expansion of macro 'GPIO_PIN_12'
-   83 | #define BUTTON_2_Pin GPIO_PIN_12
-      |                      ^~~~~~~~~~~
-../Core/Src/UDF_button.c:55:59: note: in expansion of macro 'BUTTON_2_Pin'
-   55 |  buttons[1].physical = (GPIO_config*){BUTTON_2_GPIO_Port, BUTTON_2_Pin};
-      |                                                           ^~~~~~~~~~~~
-In file included from ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:128,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
-                 from ../Core/Inc/stm32f1xx_hal_conf.h:237,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
-                 from ../Core/Inc/main.h:31,
-                 from ../Core/Inc/UDF_global.h:11,
-                 from ../Core/Inc/UDF_button.h:12,
-                 from ../Core/Src/UDF_button.c:10:
-../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:651:29: warning: initialization of 'GPIO_config *' {aka 'struct _GPIO_config *'} from incompatible pointer type 'GPIO_TypeDef *' {aka 'struct <anonymous> *'} [-Wincompatible-pointer-types]
-  651 | #define GPIOB               ((GPIO_TypeDef *)GPIOB_BASE)
-      |                             ^
-../Core/Inc/main.h:86:28: note: in expansion of macro 'GPIOB'
-   86 | #define BUTTON_3_GPIO_Port GPIOB
-      |                            ^~~~~
-../Core/Src/UDF_button.c:56:39: note: in expansion of macro 'BUTTON_3_GPIO_Port'
-   56 |  buttons[2].physical = (GPIO_config*){BUTTON_3_GPIO_Port, BUTTON_3_Pin};
-      |                                       ^~~~~~~~~~~~~~~~~~
-../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:651:29: note: (near initialization for '(anonymous)')
-  651 | #define GPIOB               ((GPIO_TypeDef *)GPIOB_BASE)
-      |                             ^
-../Core/Inc/main.h:86:28: note: in expansion of macro 'GPIOB'
-   86 | #define BUTTON_3_GPIO_Port GPIOB
-      |                            ^~~~~
-../Core/Src/UDF_button.c:56:39: note: in expansion of macro 'BUTTON_3_GPIO_Port'
-   56 |  buttons[2].physical = (GPIO_config*){BUTTON_3_GPIO_Port, BUTTON_3_Pin};
-      |                                       ^~~~~~~~~~~~~~~~~~
-In file included from ../Core/Inc/stm32f1xx_hal_conf.h:241,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
-                 from ../Core/Inc/main.h:31,
-                 from ../Core/Inc/UDF_global.h:11,
-                 from ../Core/Inc/UDF_button.h:12,
-                 from ../Core/Src/UDF_button.c:10:
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:95:36: warning: excess elements in scalar initializer
-   95 | #define GPIO_PIN_13                ((uint16_t)0x2000)  /* Pin 13 selected   */
-      |                                    ^
-../Core/Inc/main.h:85:22: note: in expansion of macro 'GPIO_PIN_13'
-   85 | #define BUTTON_3_Pin GPIO_PIN_13
-      |                      ^~~~~~~~~~~
-../Core/Src/UDF_button.c:56:59: note: in expansion of macro 'BUTTON_3_Pin'
-   56 |  buttons[2].physical = (GPIO_config*){BUTTON_3_GPIO_Port, BUTTON_3_Pin};
-      |                                                           ^~~~~~~~~~~~
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:95:36: note: (near initialization for '(anonymous)')
-   95 | #define GPIO_PIN_13                ((uint16_t)0x2000)  /* Pin 13 selected   */
-      |                                    ^
-../Core/Inc/main.h:85:22: note: in expansion of macro 'GPIO_PIN_13'
-   85 | #define BUTTON_3_Pin GPIO_PIN_13
-      |                      ^~~~~~~~~~~
-../Core/Src/UDF_button.c:56:59: note: in expansion of macro 'BUTTON_3_Pin'
-   56 |  buttons[2].physical = (GPIO_config*){BUTTON_3_GPIO_Port, BUTTON_3_Pin};
-      |                                                           ^~~~~~~~~~~~
+../Core/Src/UDF_traffic_light.c: In function 'fsm_traffic_light_system':
+../Core/Src/UDF_traffic_light.c:154:2: warning: enumeration value 'NONE' not handled in switch [-Wswitch]
+  154 |  switch(button_to_response){
+      |  ^~~~~~
 arm-none-eabi-gcc -o "Button.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Button\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Button.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Button.elf
  
 arm-none-eabi-size   Button.elf 
 arm-none-eabi-objdump -h -S  Button.elf  > "Button.list"
 arm-none-eabi-objcopy  -O ihex  Button.elf  "Button.hex"
-   text	   data	    bss	    dec	    hex	filename
-   7856	     64	   2096	  10016	   2720	Button.elf
 arm-none-eabi-objcopy  -O binary  Button.elf  "Button.bin"
+   text	   data	    bss	    dec	    hex	filename
+   9500	     72	   2144	  11716	   2dc4	Button.elf
 Finished building: default.size.stdout
  
-Finished building: Button.list
 Finished building: Button.hex
+Finished building: Button.list
 Finished building: Button.bin
  
  
  
 
-18:14:20 Build Finished. 0 errors, 6 warnings. (took 1s.78ms)
+20:21:14 Build Finished. 0 errors, 1 warnings. (took 872ms)
 

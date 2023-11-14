@@ -1,3 +1,3 @@
-UDF_led_segment.c:29:6:init_led_segment	48	static
-UDF_led_segment.c:42:6:modify_led_segment_buffer	16	static
-UDF_led_segment.c:47:6:display_led_segment	16	static
+UDF_led_segment.c:25:6:init_led_segment	56	static
+UDF_led_segment.c:40:6:modify_led_segment_buffer	16	static
+UDF_led_segment.c:45:6:display_led_segment	24	static

@@ -1,7 +1,7 @@
-UDF_button.c:32:5:calculate_button_sample_limit	16	static
-UDF_button.c:49:6:init_button	16	static
-UDF_button.c:70:6:button_reading	24	static
-UDF_button.c:114:15:is_button_pressed	16	static
-UDF_button.c:119:15:is_button_long_pressed	16	static
-UDF_button.c:124:15:is_button_response_needed	16	static
-UDF_button.c:129:6:finish_to_respond	16	static
+UDF_button.c:32:5:calculate_button_sample_limit	4	static
+UDF_button.c:50:6:init_button	16	static
+UDF_button.c:71:6:button_reading	24	static
+UDF_button.c:115:15:is_button_pressed	16	static
+UDF_button.c:120:15:is_button_long_pressed	16	static
+UDF_button.c:125:15:is_button_response_needed	16	static
+UDF_button.c:130:6:finish_to_respond	16	static
