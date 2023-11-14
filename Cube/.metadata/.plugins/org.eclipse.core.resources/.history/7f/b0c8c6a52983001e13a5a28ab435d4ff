@@ -126,6 +126,21 @@ void fsm_button(){
 			button_to_response = index;
 		}
 	}
+//	if(button_to_response == MODIFY_VALUE)
+//		display_led_indicator(SIDE_A, RED);
+//	switch(button_to_response){
+//	case SELECT_MODE:
+//		display_led_indicator(SIDE_A, RED);
+//		break;
+//	case MODIFY_VALUE:
+//		display_led_indicator(SIDE_A, AMBER);
+//		break;
+//	case SELECT_VALUE:
+//		display_led_indicator(SIDE_A, GREEN);
+//		break;
+//	case NONE:
+//		display_led_indicator(SIDE_B, RED);
+//	}
 }
 
 /* Public function  */

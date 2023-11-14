@@ -100,12 +100,12 @@ uint8_t respond_to_button(BUTTON_PURPOSE buttonIndex){
 			 // Response to: Single press only
 			 case SELECT_MODE:
 			 case SELECT_VALUE:
-				 if(!is_button_long_pressed(buttonIndex))
-					 result = RESPONSE_NEEDED;
+//				 if(!is_button_long_pressed(buttonIndex))
+//					 result = RESPONSE_NEEDED;
 				 break;
 			 // Response to: Single/Long press
 			 case MODIFY_VALUE:
-				 result = RESPONSE_NEEDED;
+//				 result = RESPONSE_NEEDED;
 				 break;
 			 default: break;
 		 }
@@ -126,6 +126,21 @@ void fsm_button(){
 			button_to_response = index;
 		}
 	}
+	if(button_to_response == MODIFY_VALUE)
+		display_led_indicator(SIDE_A, RED);
+//	switch(button_to_response){
+//	case SELECT_MODE:
+//		display_led_indicator(SIDE_A, RED);
+//		break;
+//	case MODIFY_VALUE:
+//		display_led_indicator(SIDE_A, AMBER);
+//		break;
+//	case SELECT_VALUE:
+//		display_led_indicator(SIDE_A, GREEN);
+//		break;
+//	case NONE:
+//		display_led_indicator(SIDE_B, RED);
+//	}
 }
 
 /* Public function  */

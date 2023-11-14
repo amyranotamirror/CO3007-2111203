@@ -124,8 +124,23 @@ void fsm_button(){
 	for(int index = NUM_BUTTON - 1; index >= 0; index--){
 		if(respond_to_button(index) == RESPONSE_NEEDED){
 			button_to_response = index;
+			if(button_to_response == MODIFY_VALUE)
+				display_led_indicator(SIDE_A, RED);
 		}
 	}
+//	switch(button_to_response){
+//	case SELECT_MODE:
+//		display_led_indicator(SIDE_A, RED);
+//		break;
+//	case MODIFY_VALUE:
+//		display_led_indicator(SIDE_A, AMBER);
+//		break;
+//	case SELECT_VALUE:
+//		display_led_indicator(SIDE_A, GREEN);
+//		break;
+//	case NONE:
+//		display_led_indicator(SIDE_B, RED);
+//	}
 }
 
 /* Public function  */

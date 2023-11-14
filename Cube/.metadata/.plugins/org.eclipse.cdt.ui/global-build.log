@@ -1,24 +1,19 @@
-02:46:26 **** Incremental Build of configuration Debug for project Button ****
+03:09:31 **** Incremental Build of configuration Debug for project Button ****
 make -j12 all 
-arm-none-eabi-gcc "../Core/Src/UDF_button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/UDF_button.d" -MT"Core/Src/UDF_button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/UDF_button.o"
-arm-none-eabi-gcc "../Core/Src/UDF_led_indicator.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/UDF_led_indicator.d" -MT"Core/Src/UDF_led_indicator.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/UDF_led_indicator.o"
-arm-none-eabi-gcc "../Core/Src/UDF_led_segment.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/UDF_led_segment.d" -MT"Core/Src/UDF_led_segment.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/UDF_led_segment.o"
-arm-none-eabi-gcc "../Core/Src/UDF_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/UDF_timer.d" -MT"Core/Src/UDF_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/UDF_timer.o"
 arm-none-eabi-gcc "../Core/Src/UDF_traffic_light.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/UDF_traffic_light.d" -MT"Core/Src/UDF_traffic_light.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/UDF_traffic_light.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "Button.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Button\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Button.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Button.elf
  
 arm-none-eabi-size   Button.elf 
 arm-none-eabi-objdump -h -S  Button.elf  > "Button.list"
 arm-none-eabi-objcopy  -O ihex  Button.elf  "Button.hex"
-arm-none-eabi-objcopy  -O binary  Button.elf  "Button.bin"
    text	   data	    bss	    dec	    hex	filename
-  10392	     68	   1892	  12352	   3040	Button.elf
+   9172	     24	   1888	  11084	   2b4c	Button.elf
+arm-none-eabi-objcopy  -O binary  Button.elf  "Button.bin"
 Finished building: default.size.stdout
  
-Finished building: Button.list
 Finished building: Button.hex
+Finished building: Button.list
 Finished building: Button.bin
  
  

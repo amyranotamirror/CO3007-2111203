@@ -105,6 +105,7 @@ uint8_t respond_to_button(BUTTON_PURPOSE buttonIndex){
 				 break;
 			 // Response to: Single/Long press
 			 case MODIFY_VALUE:
+				 display_led_indicator(SIDE_A, RED);
 				 result = RESPONSE_NEEDED;
 				 break;
 			 default: break;
@@ -126,6 +127,19 @@ void fsm_button(){
 			button_to_response = index;
 		}
 	}
+//	switch(button_to_response){
+//	case SELECT_MODE:
+//		display_led_indicator(SIDE_A, RED);
+//		break;
+//	case MODIFY_VALUE:
+//		display_led_indicator(SIDE_A, AMBER);
+//		break;
+//	case SELECT_VALUE:
+//		display_led_indicator(SIDE_A, GREEN);
+//		break;
+//	case NONE:
+//		display_led_indicator(SIDE_B, RED);
+//	}
 }
 
 /* Public function  */

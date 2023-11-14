@@ -126,6 +126,7 @@ void fsm_button(){
 			button_to_response = index;
 		}
 	}
+
 }
 
 /* Public function  */
