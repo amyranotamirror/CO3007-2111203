@@ -11,18 +11,11 @@
 /* Private variables declaration */
 
 /* Private function  */
-int calculate_button_sample_rate(){
-	// Internal interrupt duration is: >= 10ms and <50ms
-	if(INTERRUPT_DURATION_MS >= BUTTON_DURATION_MIN && INTERRUPT_DURATION_MS < BUTTON_DURATION_MAX)
-		return 1;
-	// Internal interrupt duration is: <10ms
-	return (BUTTON_DURATION_MIN / INTERRUPT_DURATION_MS) + 1;
-}
 
 /* Public function  */
 void init_timer(){
 	// Set counter limit to raise a flag
-	timers[TIMER_BUTTON].limit = calculate_button_sample_rate();
+	timers[TIMER_BUTTON].limit = BUTTON_DURATION_MIN / INTERRUPT_DURATION_MS;
 	timers[TIMER_LED_INDICATOR].limit = LED_INDICATOR_DURATION_MS / INTERRUPT_DURATION_MS;
 	timers[TIMER_LED_SEGMENT].limit = LED_SEGMENT_DURATION_MS / INTERRUPT_DURATION_MS;
 	timers[TIMER_SECOND].limit = SECOND_DURATION_MS / INTERRUPT_DURATION_MS;

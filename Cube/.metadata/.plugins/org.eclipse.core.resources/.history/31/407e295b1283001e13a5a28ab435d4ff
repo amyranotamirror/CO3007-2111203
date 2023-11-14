@@ -1,0 +1,125 @@
+/*
+ * UDF_button.c
+ *
+ *  Created on: Nov 13, 2023
+ *      Author: Amyra Nguyen
+ */
+
+
+/* Import library */
+#include "UDF_button.h"
+#include "UDF_led_indicator.h"
+/* Private define */
+GPIO_PinState BUTTON_IS_PRESSED = GPIO_PIN_RESET;
+GPIO_PinState BUTTON_IS_RELEASED = GPIO_PIN_SET;
+typedef struct _button{
+	GPIO_config physical;
+	GPIO_PinState sampleBuffer[100];
+	GPIO_PinState state;
+	int currentSampleIndex;
+	int counterForLongPress; // Delay before auto increase
+	uint8_t flagToResponse;	  	 // Allow to increase
+	uint8_t flagForLongPress;	 // Delay state
+} button;
+
+/* Private variables declaration */
+static int buttonSampleLimit = 1;
+static int durationForAutoIncreasing = 1;
+// Button class
+button buttons[NUM_BUTTON];
+
+/* Private function */
+int calculate_button_sample_limit(){
+	// Interrupt duration is: < 10ms
+	int sampleUnit = timers[TIMER_BUTTON].limit,
+			sampleLimit = sampleUnit;
+	for(; ((sampleLimit + sampleUnit) * INTERRUPT_DURATION_MS) < BUTTON_DURATION_MAX;
+			sampleLimit += sampleUnit){}
+	return (sampleLimit / sampleUnit) - 1;
+}
+
+/* Public function  */
+void init_button(){
+	// Calculate value for button sampling, auto increase
+	buttonSampleLimit = calculate_button_sample_limit();
+
+	// Set physical port and pin
+	buttons[0].physical = (GPIO_config){BUTTON_1_GPIO_Port, BUTTON_1_Pin};
+	buttons[1].physical = (GPIO_config){BUTTON_2_GPIO_Port, BUTTON_2_Pin};
+	buttons[2].physical = (GPIO_config){BUTTON_3_GPIO_Port, BUTTON_3_Pin};
+
+	// Set button initial state
+	for(uint16_t index = 0; index < NUM_BUTTON; index++){
+		buttons[index].state = BUTTON_IS_RELEASED;
+		buttons[index].currentSampleIndex = 0;
+		buttons[index].counterForLongPress = 0;
+		buttons[index].flagForLongPress = TURN_OFF;
+		buttons[index].flagToResponse = TURN_OFF;
+		// Reset sample buffer
+		for(uint16_t sample = 0; sample < buttonSampleLimit; sample++){
+			buttons[index].sampleBuffer[sample] = TURN_OFF;
+		}
+	}
+}
+
+void button_reading(){
+	/* Trigger: Button sampling with timer interrupt, flag raised */
+	if(timers[TIMER_BUTTON].flag == TURN_ON){
+		for(int index = 0; index < NUM_BUTTON; index++){
+			// Read button input to temporary value
+			GPIO_PinState currentSample = HAL_GPIO_ReadPin(
+					buttons[index].physical.port, buttons[index].physical.pin);
+			int currentIndex = buttons[index].currentSampleIndex;
+
+			// Detect edges
+			if(currentSample != buttons[index].state)
+				currentIndex = 0;
+			// Save read value to buffer
+			buttons[index].sampleBuffer[currentIndex] = currentSample;
+
+			// Collect enough samples
+			if(currentIndex == (buttonSampleLimit - 1)){
+				// State transition
+				buttons[index].state = currentSample;
+				if(currentSample == BUTTON_IS_PRESSED){
+					// First press
+					if(buttons[index].flagForLongPress == TURN_OFF){
+						buttons[index].flagToResponse = TURN_ON;
+					}
+					if(buttons[index].counterForLongPress < durationForAutoIncreasing){
+
+					}
+				}
+				else{
+					buttons[index].counterForLongPress = 0;
+					buttons[index].flagForLongPress = TURN_OFF;
+				}
+			}
+
+			// Increase index
+			buttons[index].currentSampleIndex
+				= (currentIndex + 1) % (buttonSampleLimit);
+		}
+		timers[TIMER_BUTTON].flag = TURN_OFF; // Reset flag
+	}
+}
+
+unsigned char is_button_pressed(uint16_t index){
+	if(index >= NUM_BUTTON) return 0;
+	return (buttons[index].state == BUTTON_IS_PRESSED);
+}
+
+unsigned char is_button_long_pressed(uint16_t index){
+	if(index >= NUM_BUTTON) return 0;
+	return (buttons[index].flagForLongPress == TURN_ON);
+}
+
+unsigned char is_button_response_needed(uint16_t index){
+	if(index >= NUM_BUTTON) return 0;
+	return (buttons[index].flagToResponse == TURN_ON);
+}
+
+void finish_to_respond(uint16_t index){
+	buttons[index].flagToResponse = TURN_OFF;
+}
+

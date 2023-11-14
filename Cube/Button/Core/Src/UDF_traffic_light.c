@@ -93,22 +93,21 @@ void fsm_led_segment(){
 
 uint8_t respond_to_button(BUTTON_PURPOSE buttonIndex){
 	uint8_t result = NO_RESPONSE_NEEDED;
-
 	// Response to certain actions
 	if(is_button_response_needed(buttonIndex)){
 		 finish_to_respond(buttonIndex); // Reset after responds
 		 switch(buttonIndex){
-		 // Response to: Single press only
-		 case SELECT_MODE:
-		 case SELECT_VALUE:
-			 if(!is_button_long_pressed(buttonIndex))
+			 // Response to: Single press only
+			 case SELECT_MODE:
+			 case SELECT_VALUE:
+				 if(!is_button_long_pressed(buttonIndex))
+					 result = RESPONSE_NEEDED;
+				 break;
+			 // Response to: Single/Long press
+			 case MODIFY_VALUE:
 				 result = RESPONSE_NEEDED;
-			 break;
-		 // Response to: Single/Long press
-		 case MODIFY_VALUE:
-			 result = RESPONSE_NEEDED;
-			 break;
-		 default: break;
+				 break;
+			 default: break;
 		 }
 	 }
 	 return result;
@@ -116,12 +115,18 @@ uint8_t respond_to_button(BUTTON_PURPOSE buttonIndex){
 
 void fsm_button(){
 	/* Read & Process buttons*/
-	button_reading();
-	// Catch button trigger: Prioritized (BTN1 > BTN2 > BTN3)
-	for(uint8_t index = NUM_BUTTON - 1; index >= 0; index--){
-		if(respond_to_button(index) == RESPONSE_NEEDED)
-			button_to_response = index;
+	if(timers[TIMER_BUTTON].flag == TURN_ON){
+		button_reading();
+		timers[TIMER_BUTTON].flag = TURN_OFF;
 	}
+
+	// Catch button trigger: Prioritized (BTN1 > BTN2 > BTN3)
+	for(int index = NUM_BUTTON - 1; index >= 0; index--){
+		if(respond_to_button(index) == RESPONSE_NEEDED){
+			button_to_response = index;
+		}
+	}
+
 }
 
 /* Public function  */
@@ -148,7 +153,7 @@ void fsm_traffic_light_system(){
 	/* Output display: led indicator, led segment*/
 	fsm_led_indicator();
 	fsm_led_segment();
-//	fsm_button();
+	fsm_button();
 
 	/* Finite state machine: Button to mode */
 	switch(button_to_response){
@@ -163,8 +168,8 @@ void fsm_traffic_light_system(){
 		}
 		else{
 			// Display LEDs segment: Mode, Modify value
-			modify_led_segment_buffer(SIDE_A, system.mode);
 			modifyValue = system.countDownLimit[system.mode - 1];
+			modify_led_segment_buffer(SIDE_A, system.mode);
 			modify_led_segment_buffer(SIDE_B, modifyValue);
 		}
 		break;
@@ -179,9 +184,9 @@ void fsm_traffic_light_system(){
 		if(system.mode != NORMAL){
 			// Save modified value
 			system.countDownLimit[system.mode - 1] = modifyValue;
-			modifyValue = DEFAULT_MODIFY_VALUE;
 		}
 		break;
+	default: break;
 	}
 	button_to_response = NONE;// Reset response trigger
 }

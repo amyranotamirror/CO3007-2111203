@@ -17,6 +17,7 @@
 #define NUM_COLOR 3
 #define NUM_BUTTON 3
 #define NUM_MODE 4
+#define NUM_DEBOUNCE 3
 #define TURN_OFF GPIO_PIN_SET
 #define TURN_ON GPIO_PIN_RESET
 

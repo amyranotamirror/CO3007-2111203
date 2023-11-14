@@ -1,0 +1,127 @@
+/*
+ * UDF_button.c
+ *
+ *  Created on: Nov 13, 2023
+ *      Author: Amyra Nguyen
+ */
+
+
+/* Import library */
+#include "UDF_button.h"
+#include "UDF_led_indicator.h"
+/* Private define */
+#define NUM_DEBOUNCE
+GPIO_PinState BUTTON_IS_PRESSED = GPIO_PIN_RESET;
+GPIO_PinState BUTTON_IS_RELEASED = GPIO_PIN_SET;
+typedef struct _button{
+	GPIO_config physical;
+	GPIO_PinState state;
+	int currentSampleIndex;
+	int counterForLongPress; // Delay before auto increase
+	uint8_t flagToResponse;	  	 // Allow to increase
+	uint8_t flagForLongPress;	 // Delay state
+} button;
+static GPIO_PinState debounceBuffer[NUM_DEBOUNCE][NUM_BUTTON];
+/* Private variables declaration */
+static int durationForAutoIncreasing = NUM_DEBOUNCE;
+// Button class
+button buttons[NUM_BUTTON];
+
+/* Private function */
+
+
+/* Public function  */
+void init_button(){
+	// Calculate value for button sampling, auto increase
+
+	// Set physical port and pin
+	buttons[0].physical = (GPIO_config){BUTTON_1_GPIO_Port, BUTTON_1_Pin};
+	buttons[1].physical = (GPIO_config){BUTTON_2_GPIO_Port, BUTTON_2_Pin};
+	buttons[2].physical = (GPIO_config){BUTTON_3_GPIO_Port, BUTTON_3_Pin};
+
+	// Set button initial state
+	for(uint16_t index = 0; index < NUM_BUTTON; index++){
+		buttons[index].state = BUTTON_IS_RELEASED;
+		buttons[index].counterForLongPress = 0;
+		buttons[index].flagForLongPress = TURN_OFF;
+		buttons[index].flagToResponse = TURN_OFF;
+	}
+}
+
+void button_reading(){
+	/* Trigger: Button sampling with timer interrupt, flag raised */
+	for(int index = 0; index < NUM_BUTTON; index++){
+		// Shift buffer & Read pin
+		debounceBuffer[2][index] = debounceBuffer[1][index];
+		debounceBuffer[1][index] = debounceBuffer[0][index];
+		debounceBuffer[0][index] = HAL_GPIO_ReadPin(
+				buttons[index].physical.port, buttons[index].physical.pin);
+
+		// Filter 3 most recent data
+		if ((debounceBuffer[0][index] == debounceBuffer[1][index])
+				&& (debounceBuffer[0][index] == debounceBuffer[2][index])) {
+			// State transition
+			if(buttons[index].state != debounceBuffer[0][index]){
+
+			}
+		}
+//		// Read button input to temporary value
+//		GPIO_PinState currentSample = HAL_GPIO_ReadPin(
+//				buttons[index].physical.port, buttons[index].physical.pin);
+//		int currentIndex = buttons[index].currentSampleIndex;
+//
+//		// Detect edges: Reset buffer index
+//		if(currentSample != buttons[index].state)
+//			currentIndex = 0;// Transition state stored at 1st position
+//		buttons[index].sampleBuffer[currentIndex] = currentSample;
+//
+//		// Collect enough samples
+//		if(currentIndex == (buttonSampleLimit - 2)){
+//			// State transition
+//			buttons[index].state = currentSample;
+//			if(currentSample == BUTTON_IS_PRESSED){
+//				// First single press, request
+//				if(buttons[index].flagForLongPress == TURN_OFF
+//						&& buttons[index].counterForLongPress == 0){
+//					buttons[index].flagToResponse = TURN_ON; // Request
+//				}
+//				// If a button is pressed, we start counting
+//				if(buttons[index].counterForLongPress < durationForAutoIncreasing){
+//					buttons[index].counterForLongPress += 1;
+//				}
+//				else{
+//					buttons[index].flagForLongPress = TURN_ON;
+//					buttons[index].flagToResponse = TURN_ON;//Request
+//					buttons[index].counterForLongPress = 1;// Reset, end cycle
+//				}
+//				display_led_indicator(SIDE_A, RED);
+//			}
+//			if(currentSample == BUTTON_IS_RELEASED){
+//				buttons[index].counterForLongPress = 0;//Reset, released
+//				buttons[index].flagForLongPress = TURN_OFF;
+//			}
+//		}
+//		// Increase index
+//		buttons[index].currentSampleIndex = (currentIndex + 1) % buttonSampleLimit;
+	}
+}
+
+unsigned char is_button_pressed(uint16_t index){
+	if(index >= NUM_BUTTON) return 0;
+	return (buttons[index].state == BUTTON_IS_PRESSED);
+}
+
+unsigned char is_button_long_pressed(uint16_t index){
+	if(index >= NUM_BUTTON) return 0;
+	return (buttons[index].flagForLongPress == TURN_ON);
+}
+
+unsigned char is_button_response_needed(uint16_t index){
+	if(index >= NUM_BUTTON) return 0;
+	return (buttons[index].flagToResponse == TURN_ON);
+}
+
+void finish_to_respond(uint16_t index){
+	buttons[index].flagToResponse = TURN_OFF;
+}
+
