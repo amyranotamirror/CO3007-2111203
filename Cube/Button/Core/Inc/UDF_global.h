@@ -9,7 +9,6 @@
 #define INC_UDF_GLOBAL_H_
 /* Import library */
 #include "main.h"
-#include "stdbool.h"
 
 /* Public define */
 #define NUM_SIDE 2

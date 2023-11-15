@@ -12,8 +12,6 @@
 #include "UDF_global.h"
 #include "UDF_timer.h"
 
-/* Public variables declaration */
-
 /* Public function declaration */
 void init_button();
 void button_reading();

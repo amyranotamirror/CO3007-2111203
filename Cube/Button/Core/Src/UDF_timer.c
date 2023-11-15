@@ -5,12 +5,8 @@
  *      Author: Amyra Nguyen
  */
 
-
 /* Import library */
 #include "UDF_timer.h"
-/* Private variables declaration */
-
-/* Private function  */
 
 /* Public function  */
 void init_timer(){

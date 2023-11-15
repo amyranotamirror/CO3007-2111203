@@ -75,16 +75,9 @@ void fsm_led_segment(){
 		break;
 	// Other cases: Modify mode
 	case MODIFY_RED:
-		modify_led_segment_buffer(SIDE_A, system.mode);
-		modify_led_segment_buffer(SIDE_B, system.countDownLimit[RED]);
-		break;
 	case MODIFY_AMBER:
-		modify_led_segment_buffer(SIDE_A, system.mode);
-		modify_led_segment_buffer(SIDE_B, system.countDownLimit[AMBER]);
-		break;
 	case MODIFY_GREEN:
 		modify_led_segment_buffer(SIDE_A, system.mode);
-		modify_led_segment_buffer(SIDE_B, system.countDownLimit[GREEN]);
 		break;
 	}
 	// Reset timer flag of second tracker
@@ -147,46 +140,45 @@ void init_fsm_traffic_light_system(){
 		system.countDownTimer[side] = system.countDownLimit[system.colors[side]];
 	}
 }
-
+int test = 0;
 void fsm_traffic_light_system(){
 	/* Output display: led indicator, led segment*/
-//	fsm_led_indicator();
-//	fsm_led_segment();
+	fsm_led_indicator();
+	fsm_led_segment();
 	fsm_button();
 
-//	/* Finite state machine: Button to mode */
-//	switch(button_to_response){
-//	case SELECT_MODE:
-//		// Go to next mode, reset modify value
-//		system.mode = (system.mode + 1) % NUM_MODE;
-//		modifyValue = DEFAULT_MODIFY_VALUE;
-//		if(system.mode == NORMAL){
-//			// Display LEDs segment: Traffic count down
-//			modify_led_segment_buffer(SIDE_A, system.countDownTimer[SIDE_A]);
-//			modify_led_segment_buffer(SIDE_B, system.countDownTimer[SIDE_B]);
-//		}
-//		else{
-//			// Display LEDs segment: Mode, Modify value
-//			modifyValue = system.countDownLimit[system.mode - 1];
-//			modify_led_segment_buffer(SIDE_A, system.mode);
-//			modify_led_segment_buffer(SIDE_B, modifyValue);
-//		}
-//			display_led_indicator(SIDE_A, RED);
-//		break;
-//	case MODIFY_VALUE:
-//		if(system.mode != NORMAL){
-//			// Increase value
-//			modifyValue = (modifyValue + 1) % DEFAULT_MODIFY_VALUE;
-//			modify_led_segment_buffer(SIDE_B, modifyValue);
-//		}
-//		break;
-//	case SELECT_VALUE:
-//		if(system.mode != NORMAL){
-//			// Save modified value
-//			system.countDownLimit[system.mode - 1] = modifyValue;
-//		}
-//		break;
-//	default: break;
-//	}
-//	button_to_response = NONE;// Reset response trigger
+	/* Finite state machine: Button to mode */
+	switch(button_to_response){
+	case SELECT_MODE:
+		// Go to next mode, reset modify value
+		system.mode = (system.mode + 1) % NUM_MODE;
+		modifyValue = DEFAULT_MODIFY_VALUE;
+		if(system.mode == NORMAL){
+			// Display LEDs segment: Traffic count down
+			modify_led_segment_buffer(SIDE_A, system.countDownTimer[SIDE_A]);
+			modify_led_segment_buffer(SIDE_B, system.countDownTimer[SIDE_B]);
+		}
+		else{
+			// Display LEDs segment: Mode, Modify value
+			modifyValue = system.countDownLimit[system.mode - 1];
+			modify_led_segment_buffer(SIDE_A, system.mode);
+			modify_led_segment_buffer(SIDE_B, modifyValue);
+		}
+		break;
+	case MODIFY_VALUE:
+		if(system.mode != NORMAL){
+			// Increase value
+			modifyValue = (modifyValue + 1) % DEFAULT_MODIFY_VALUE;
+			modify_led_segment_buffer(SIDE_B, modifyValue);
+		}
+		break;
+	case SELECT_VALUE:
+		if(system.mode != NORMAL){
+			// Save modified value
+			system.countDownLimit[system.mode - 1] = modifyValue;
+		}
+		break;
+	default: break;
+	}
+	button_to_response = NONE;// Reset response trigger
 }

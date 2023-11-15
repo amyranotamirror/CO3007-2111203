@@ -1,5 +1,5 @@
-UDF_button.c:33:6:init_button	40	static
-UDF_button.c:50:6:button_reading	16	static
+UDF_button.c:32:6:init_button	40	static
+UDF_button.c:49:6:button_reading	16	static
 UDF_button.c:97:15:is_button_pressed	16	static
 UDF_button.c:102:15:is_button_long_pressed	16	static
 UDF_button.c:107:15:is_button_response_needed	16	static

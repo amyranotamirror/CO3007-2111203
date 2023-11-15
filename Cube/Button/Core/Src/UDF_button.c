@@ -8,7 +8,6 @@
 
 /* Import library */
 #include "UDF_button.h"
-#include "UDF_led_indicator.h"
 
 /* Private define */
 #define BUTTON_IS_PRESSED GPIO_PIN_RESET
@@ -78,6 +77,7 @@ void button_reading(){
 					buttons[index].flagForLongPress = TURN_OFF;
 				}
 			}
+			// Simply sampling data
 			else{
 				if(buttons[index].state == BUTTON_IS_PRESSED){
 					buttons[index].counterForLongPress--;

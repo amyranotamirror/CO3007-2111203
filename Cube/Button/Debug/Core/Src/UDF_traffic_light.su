@@ -1,6 +1,6 @@
 UDF_traffic_light.c:29:6:fsm_led_indicator	16	static
 UDF_traffic_light.c:62:6:fsm_led_segment	8	static
-UDF_traffic_light.c:94:9:respond_to_button	24	static
-UDF_traffic_light.c:116:6:fsm_button	16	static
-UDF_traffic_light.c:145:6:init_fsm_traffic_light_system	16	static
-UDF_traffic_light.c:164:6:fsm_traffic_light_system	8	static
+UDF_traffic_light.c:87:9:respond_to_button	24	static
+UDF_traffic_light.c:109:6:fsm_button	16	static
+UDF_traffic_light.c:125:6:init_fsm_traffic_light_system	16	static
+UDF_traffic_light.c:144:6:fsm_traffic_light_system	8	static

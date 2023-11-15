@@ -24,7 +24,7 @@ Core/Src/UDF_button.o: ../Core/Src/UDF_button.c ../Core/Inc/UDF_button.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
- ../Core/Inc/UDF_timer.h ../Core/Inc/UDF_led_indicator.h
+ ../Core/Inc/UDF_timer.h
 
 ../Core/Inc/UDF_button.h:
 
@@ -81,5 +81,3 @@ Core/Src/UDF_button.o: ../Core/Src/UDF_button.c ../Core/Inc/UDF_button.h \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 
 ../Core/Inc/UDF_timer.h:
-
-../Core/Inc/UDF_led_indicator.h:
