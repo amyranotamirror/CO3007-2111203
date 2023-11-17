@@ -679,3 +679,38 @@
 2023-11-17 13:06:35,879 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x74,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
 2023-11-17 13:06:40,068 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
 2023-11-17 13:11:35,495 [INFO] Gpio:254 - dependency for GPIO [SYS]
+2023-11-17 13:13:24,440 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 797881456 Bytes (1073741824)
+2023-11-17 13:13:25,633 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 831435888 Bytes (1073741824)
+2023-11-17 13:13:35,674 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 731641456 Bytes (1073741824)
+2023-11-17 13:13:36,230 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2023-11-17 13:13:36,230 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2023-11-17 13:13:36,230 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2023-11-17 13:13:36,230 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2023-11-17 13:13:36,230 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2023-11-17 13:13:36,230 [INFO] CodeGenerator:663 - code generatio: config db path: D:\Installation\Apps\CubeIDE\STM32CubeIDE_1.7.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.3.0.202107141111\\db\
+2023-11-17 13:13:36,763 [INFO] CodeEngine:239 - oldGeneratedFile, D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Scheduler\MXTmpFiles\license.tmp_save
+2023-11-17 13:13:36,871 [INFO] CodeEngine:257 - Generated code: D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Scheduler\MXTmpFiles\license.tmp
+2023-11-17 13:13:36,993 [INFO] CodeEngine:239 - oldGeneratedFile, D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Scheduler\MXTmpFiles\gpio.tmp_save
+2023-11-17 13:13:37,100 [INFO] CodeEngine:257 - Generated code: D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Scheduler\MXTmpFiles\gpio.tmp
+2023-11-17 13:13:37,448 [INFO] CodeEngine:239 - oldGeneratedFile, D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Scheduler\Core\Src\stm32f1xx_it.c_save
+2023-11-17 13:13:37,623 [INFO] CodeEngine:257 - Generated code: D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Scheduler\Core\Src\stm32f1xx_it.c
+2023-11-17 13:13:37,637 [INFO] CodeEngine:239 - oldGeneratedFile, D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Scheduler\Core\Inc\stm32f1xx_it.h_save
+2023-11-17 13:13:37,763 [INFO] CodeEngine:257 - Generated code: D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Scheduler\Core\Inc\stm32f1xx_it.h
+2023-11-17 13:13:37,779 [INFO] CodeEngine:239 - oldGeneratedFile, D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Scheduler\Core\Src\stm32f1xx_hal_msp.c_save
+2023-11-17 13:13:37,959 [INFO] CodeEngine:257 - Generated code: D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Scheduler\Core\Src\stm32f1xx_hal_msp.c
+2023-11-17 13:13:37,968 [INFO] CodeEngine:239 - oldGeneratedFile, D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Scheduler\MXTmpFiles\system.tmp_save
+2023-11-17 13:13:38,083 [INFO] CodeEngine:257 - Generated code: D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Scheduler\MXTmpFiles\system.tmp
+2023-11-17 13:13:38,092 [INFO] CodeEngine:239 - oldGeneratedFile, D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Scheduler\Core\Inc\stm32f1xx_hal_conf.h_save
+2023-11-17 13:13:38,240 [INFO] CodeEngine:257 - Generated code: D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Scheduler\Core\Inc\stm32f1xx_hal_conf.h
+2023-11-17 13:13:38,273 [WARN] IPConfigManager:3148 - IP not found : TIM
+2023-11-17 13:13:38,273 [WARN] CodeGenerator:3268 - IP not found : null
+2023-11-17 13:13:38,291 [INFO] CodeEngine:239 - oldGeneratedFile, D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Scheduler\Core\Inc\main.h_save
+2023-11-17 13:13:38,431 [INFO] CodeEngine:257 - Generated code: D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Scheduler\Core\Inc\main.h
+2023-11-17 13:13:38,438 [INFO] CodeEngine:239 - oldGeneratedFile, D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Scheduler\Core\Src\main.c_save
+2023-11-17 13:13:38,694 [INFO] CodeEngine:257 - Generated code: D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\Scheduler\Core\Src\main.c
+2023-11-17 13:13:40,282 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 122mS.
+2023-11-17 13:13:40,292 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2023-11-17 13:13:41,215 [INFO] ConfigFileManager:1271 - The Die is : DIE412
+2023-11-17 13:13:44,691 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 4399mS.
+2023-11-17 13:13:44,692 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 1mS.
+2023-11-17 13:13:44,692 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
