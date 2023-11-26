@@ -1,0 +1,17 @@
+/*
+ * global.h
+ *
+ *  Created on: 26 thg 11, 2023
+ *      Author: Amyra Nguyen
+ */
+
+#ifndef INC_GLOBAL_H_
+#define INC_GLOBAL_H_
+
+enum BUTTON_STATE { IS_RELEASE,
+					IS_PRESSED,
+					IS_PRESSED_DELAY,
+					IS_LONG_PRESSED };
+enum LED_INDICATOR { };
+
+#endif /* INC_GLOBAL_H_ */

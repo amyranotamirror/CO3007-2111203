@@ -1,0 +1,14 @@
+/*
+ * gpio.h
+ *
+ *  Created on: 26 thg 11, 2023
+ *      Author: Amyra Nguyen
+ */
+
+#ifndef INC_GPIO_H_
+#define INC_GPIO_H_
+
+
+void* config_GPIO(GPIO_TypeDef* port, uint16_t pin);
+
+#endif /* INC_GPIO_H_ */

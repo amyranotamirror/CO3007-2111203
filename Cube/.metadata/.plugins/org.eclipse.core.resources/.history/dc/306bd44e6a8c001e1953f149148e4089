@@ -1,0 +1,15 @@
+/*
+ * gpio.c
+ *
+ *  Created on: 26 thg 11, 2023
+ *      Author: Amyra Nguyen
+ */
+
+
+#include "main.h"
+#include "gpio.h"
+
+struct GPIO__configuration{
+	GPIO_TypeDef * port;
+	uint16_t pin;
+};

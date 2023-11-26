@@ -1,0 +1,28 @@
+/*
+ * button.h
+ *
+ *  Created on: 26 thg 11, 2023
+ *      Author: Amyra Nguyen
+ */
+
+#ifndef INC_BUTTON_H_
+#define INC_BUTTON_H_
+
+#include "global.h"
+enum BUTTON_STATE {IS_RELEASE,
+				   IS_PRESSED,
+				   IS_LONG_PRESSED};
+
+typedef struct _Button{
+	GPIO_config connection;
+	BUTTON_STATE state;
+	uint32_t counterForLongPress; // Delay before auto increase
+	uint8_t flagForLongPress;	 // Delay state
+} Button;
+
+void initButton();
+void readButton();
+uint16_t isButtonPressed(uint16_t ID);
+uint16_t isButtonLongPressed(uint16_t ID);
+
+#endif /* INC_BUTTON_H_ */

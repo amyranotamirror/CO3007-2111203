@@ -1,0 +1,58 @@
+/*
+ * button.c
+ *
+ *  Created on: 26 thg 11, 2023
+ *      Author: Amyra Nguyen
+ */
+
+#include <button.h>
+
+// Private variables / define / macros
+#define NO_DEBOUNCE		3
+#define BUTTON_IS_PRESSED GPIO_PIN_RESET
+#define BUTTON_IS_RELEASED GPIO_PIN_SET
+
+typedef struct _Button{
+	GPIO_config connection;
+	GPIO_PinState debounceBuffer[NO_DEBOUNCE];
+	uint32_t debounceCursor;
+
+	BUTTON_STATE state;
+	uint32_t counterForLongPress; // Delay before auto increase
+	uint8_t flagForLongPress;	 // Delay state
+} Button;
+Button buttonArray[NO_BUTTONS];
+
+// Private functions
+void resetButton(Button* this){
+	for(uint32_t index = 0; indexx < NO_DEBOUNCE; index++){
+
+	}
+	this->state =IS_RELEASE;
+	this->counterForLongPress = 0;
+	this->flagForLongPress = 0;
+}
+
+// Pubic function
+void initButton(){
+	buttonArray[0].connection = (GPIO_config*){BUTTON_INPUT_GPIO_Port,
+											   BUTTON_INPUT_Pin};
+	for(uint32_t index = 0; index < NO_BUTTONS; index++){
+		resetButton(buttonArray[index]);
+	}
+}
+
+void readButton(){
+	for(uint32_t index = 0; index < NO_BUTTONS; index++){
+
+
+	}
+}
+
+uint16_t isButtonPressed(uint16_t ID){
+
+}
+
+uint16_t isButtonLongPressed(uint16_t ID){
+
+}

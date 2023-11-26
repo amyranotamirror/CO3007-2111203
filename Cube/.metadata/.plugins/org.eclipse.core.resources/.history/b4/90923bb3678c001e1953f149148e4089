@@ -1,0 +1,14 @@
+/*
+ * global.h
+ *
+ *  Created on: 26 thg 11, 2023
+ *      Author: Amyra Nguyen
+ */
+
+#ifndef INC_GLOBAL_H_
+#define INC_GLOBAL_H_
+
+// Forward declaration
+struct Button();
+
+#endif /* INC_GLOBAL_H_ */
