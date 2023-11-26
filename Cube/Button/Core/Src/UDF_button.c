@@ -18,7 +18,6 @@
 typedef struct _button{
 	GPIO_config physical;
 	GPIO_PinState state;
-	int currentSampleIndex;
 	int counterForLongPress; // Delay before auto increase
 	uint8_t flagToResponse;	  	 // Allow to increase
 	uint8_t flagForLongPress;	 // Delay state

@@ -11148,3 +11148,42 @@ java.lang.NullPointerException
 	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
 	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2263)
 	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4930)
+!SESSION 2023-11-23 22:53:41.873 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-11-23 22:55:05.886
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-11-23 22:55:19.319
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-11-23 22:55:19.380
+!MESSAGE Log4j initialized with config file D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-11-23 22:55:32.614
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2023-11-23 22:58:40.850
+!MESSAGE No repository found at http://eclipse-fonts.googlecode.com/svn/trunk/FontsUpdate/.
+!SESSION 2023-11-26 17:35:33.437 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-11-26 17:37:26.314
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-11-26 17:37:26.403
+!MESSAGE Log4j initialized with config file D:\HCMUT\KNOWLEDGE\Github\HCMUT\Team\CO3007-2111203\CO3007-2111203\Cube\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-11-26 17:37:40.772
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2023-11-26 17:39:33.254
+!MESSAGE No repository found at http://eclipse-fonts.googlecode.com/svn/trunk/FontsUpdate/.
