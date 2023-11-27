@@ -10,5 +10,6 @@
 
 #include <stdint.h>
 #include "global.h"
+#include "timer.h"
 
 #endif /* INC_SCHEDULER_H_ */

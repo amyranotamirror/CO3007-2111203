@@ -197,13 +197,13 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, LED_HALF_Pin|LED_ONE_Pin|LED_ONE_HALF_Pin|LED_TWO_Pin
-                          |LED_TWO_HALF_Pin|LED_ONESHOT_Pin|LED_BUTTON_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, LED_500_Pin|LED_1000_Pin|LED_1500_Pin|LED_2000_Pin
+                          |LED_2500_Pin|LED_ONESHOT_Pin|LED_BUTTON_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : LED_HALF_Pin LED_ONE_Pin LED_ONE_HALF_Pin LED_TWO_Pin
-                           LED_TWO_HALF_Pin LED_ONESHOT_Pin LED_BUTTON_Pin */
-  GPIO_InitStruct.Pin = LED_HALF_Pin|LED_ONE_Pin|LED_ONE_HALF_Pin|LED_TWO_Pin
-                          |LED_TWO_HALF_Pin|LED_ONESHOT_Pin|LED_BUTTON_Pin;
+  /*Configure GPIO pins : LED_500_Pin LED_1000_Pin LED_1500_Pin LED_2000_Pin
+                           LED_2500_Pin LED_ONESHOT_Pin LED_BUTTON_Pin */
+  GPIO_InitStruct.Pin = LED_500_Pin|LED_1000_Pin|LED_1500_Pin|LED_2000_Pin
+                          |LED_2500_Pin|LED_ONESHOT_Pin|LED_BUTTON_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

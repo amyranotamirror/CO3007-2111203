@@ -58,16 +58,16 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define LED_HALF_Pin GPIO_PIN_1
-#define LED_HALF_GPIO_Port GPIOA
-#define LED_ONE_Pin GPIO_PIN_2
-#define LED_ONE_GPIO_Port GPIOA
-#define LED_ONE_HALF_Pin GPIO_PIN_3
-#define LED_ONE_HALF_GPIO_Port GPIOA
-#define LED_TWO_Pin GPIO_PIN_4
-#define LED_TWO_GPIO_Port GPIOA
-#define LED_TWO_HALF_Pin GPIO_PIN_5
-#define LED_TWO_HALF_GPIO_Port GPIOA
+#define LED_500_Pin GPIO_PIN_1
+#define LED_500_GPIO_Port GPIOA
+#define LED_1000_Pin GPIO_PIN_2
+#define LED_1000_GPIO_Port GPIOA
+#define LED_1500_Pin GPIO_PIN_3
+#define LED_1500_GPIO_Port GPIOA
+#define LED_2000_Pin GPIO_PIN_4
+#define LED_2000_GPIO_Port GPIOA
+#define LED_2500_Pin GPIO_PIN_5
+#define LED_2500_GPIO_Port GPIOA
 #define LED_ONESHOT_Pin GPIO_PIN_6
 #define LED_ONESHOT_GPIO_Port GPIOA
 #define LED_BUTTON_Pin GPIO_PIN_7
