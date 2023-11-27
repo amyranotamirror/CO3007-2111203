@@ -69,28 +69,29 @@ Discarded input sections
  .group         0x0000000000000000        0xc ./Core/Src/button.o
  .group         0x0000000000000000        0xc ./Core/Src/button.o
  .group         0x0000000000000000        0xc ./Core/Src/button.o
+ .group         0x0000000000000000        0xc ./Core/Src/button.o
  .text          0x0000000000000000        0x0 ./Core/Src/button.o
  .data          0x0000000000000000        0x0 ./Core/Src/button.o
  .bss           0x0000000000000000        0x0 ./Core/Src/button.o
- .text.resetButton
-                0x0000000000000000       0x24 ./Core/Src/button.o
  .text.acceptButtonData
                 0x0000000000000000       0x78 ./Core/Src/button.o
  .rodata        0x0000000000000000        0x8 ./Core/Src/button.o
  .text.initButton
-                0x0000000000000000       0x88 ./Core/Src/button.o
+                0x0000000000000000       0x84 ./Core/Src/button.o
  .text.readButton
-                0x0000000000000000       0x90 ./Core/Src/button.o
+                0x0000000000000000       0xcc ./Core/Src/button.o
  .text.isButtonPressed
-                0x0000000000000000       0x44 ./Core/Src/button.o
+                0x0000000000000000       0x34 ./Core/Src/button.o
  .text.isButtonLongPressed
-                0x0000000000000000       0x4c ./Core/Src/button.o
- .debug_info    0x0000000000000000      0x4b6 ./Core/Src/button.o
- .debug_abbrev  0x0000000000000000      0x1d9 ./Core/Src/button.o
+                0x0000000000000000       0x48 ./Core/Src/button.o
+ .text.isButtonRequest
+                0x0000000000000000       0x48 ./Core/Src/button.o
+ .debug_info    0x0000000000000000      0x494 ./Core/Src/button.o
+ .debug_abbrev  0x0000000000000000      0x1d7 ./Core/Src/button.o
  .debug_aranges
                 0x0000000000000000       0x48 ./Core/Src/button.o
  .debug_ranges  0x0000000000000000       0x38 ./Core/Src/button.o
- .debug_macro   0x0000000000000000      0x1db ./Core/Src/button.o
+ .debug_macro   0x0000000000000000      0x1e0 ./Core/Src/button.o
  .debug_macro   0x0000000000000000      0xa9c ./Core/Src/button.o
  .debug_macro   0x0000000000000000      0x215 ./Core/Src/button.o
  .debug_macro   0x0000000000000000       0x2e ./Core/Src/button.o
@@ -127,14 +128,16 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x8ed ./Core/Src/button.o
  .debug_macro   0x0000000000000000       0x69 ./Core/Src/button.o
  .debug_macro   0x0000000000000000       0x64 ./Core/Src/button.o
+ .debug_macro   0x0000000000000000       0x10 ./Core/Src/button.o
  .debug_macro   0x0000000000000000       0x3a ./Core/Src/button.o
- .debug_line    0x0000000000000000      0x962 ./Core/Src/button.o
- .debug_str     0x0000000000000000    0x7fafa ./Core/Src/button.o
+ .debug_line    0x0000000000000000      0x9a4 ./Core/Src/button.o
+ .debug_str     0x0000000000000000    0x7fb06 ./Core/Src/button.o
  .comment       0x0000000000000000       0x54 ./Core/Src/button.o
- .debug_frame   0x0000000000000000       0xf8 ./Core/Src/button.o
+ .debug_frame   0x0000000000000000       0xfc ./Core/Src/button.o
  .ARM.attributes
                 0x0000000000000000       0x2d ./Core/Src/button.o
  COMMON         0x0000000000000000       0x1c ./Core/Src/button.o
+ .group         0x0000000000000000        0xc ./Core/Src/global.o
  .group         0x0000000000000000        0xc ./Core/Src/global.o
  .group         0x0000000000000000        0xc ./Core/Src/global.o
  .group         0x0000000000000000        0xc ./Core/Src/global.o
@@ -178,7 +181,7 @@ Discarded input sections
  .debug_abbrev  0x0000000000000000       0x9a ./Core/Src/global.o
  .debug_aranges
                 0x0000000000000000       0x18 ./Core/Src/global.o
- .debug_macro   0x0000000000000000      0x1b0 ./Core/Src/global.o
+ .debug_macro   0x0000000000000000      0x1b5 ./Core/Src/global.o
  .debug_macro   0x0000000000000000      0xa9c ./Core/Src/global.o
  .debug_macro   0x0000000000000000      0x215 ./Core/Src/global.o
  .debug_macro   0x0000000000000000       0x2e ./Core/Src/global.o
@@ -215,11 +218,13 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x8ed ./Core/Src/global.o
  .debug_macro   0x0000000000000000       0x69 ./Core/Src/global.o
  .debug_macro   0x0000000000000000       0x64 ./Core/Src/global.o
+ .debug_macro   0x0000000000000000       0x10 ./Core/Src/global.o
  .debug_line    0x0000000000000000      0x7cd ./Core/Src/global.o
- .debug_str     0x0000000000000000    0x7f83c ./Core/Src/global.o
+ .debug_str     0x0000000000000000    0x7f869 ./Core/Src/global.o
  .comment       0x0000000000000000       0x54 ./Core/Src/global.o
  .ARM.attributes
                 0x0000000000000000       0x33 ./Core/Src/global.o
+ .group         0x0000000000000000        0xc ./Core/Src/led_indicator.o
  .group         0x0000000000000000        0xc ./Core/Src/led_indicator.o
  .group         0x0000000000000000        0xc ./Core/Src/led_indicator.o
  .group         0x0000000000000000        0xc ./Core/Src/led_indicator.o
@@ -263,7 +268,7 @@ Discarded input sections
  .debug_abbrev  0x0000000000000000       0x9a ./Core/Src/led_indicator.o
  .debug_aranges
                 0x0000000000000000       0x18 ./Core/Src/led_indicator.o
- .debug_macro   0x0000000000000000      0x1ba ./Core/Src/led_indicator.o
+ .debug_macro   0x0000000000000000      0x1bf ./Core/Src/led_indicator.o
  .debug_macro   0x0000000000000000      0xa9c ./Core/Src/led_indicator.o
  .debug_macro   0x0000000000000000      0x215 ./Core/Src/led_indicator.o
  .debug_macro   0x0000000000000000       0x2e ./Core/Src/led_indicator.o
@@ -300,8 +305,9 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x8ed ./Core/Src/led_indicator.o
  .debug_macro   0x0000000000000000       0x69 ./Core/Src/led_indicator.o
  .debug_macro   0x0000000000000000       0x64 ./Core/Src/led_indicator.o
+ .debug_macro   0x0000000000000000       0x10 ./Core/Src/led_indicator.o
  .debug_line    0x0000000000000000      0x7e7 ./Core/Src/led_indicator.o
- .debug_str     0x0000000000000000    0x7f859 ./Core/Src/led_indicator.o
+ .debug_str     0x0000000000000000    0x7f886 ./Core/Src/led_indicator.o
  .comment       0x0000000000000000       0x54 ./Core/Src/led_indicator.o
  .ARM.attributes
                 0x0000000000000000       0x33 ./Core/Src/led_indicator.o
@@ -416,6 +422,7 @@ Discarded input sections
  .group         0x0000000000000000        0xc ./Core/Src/scheduler.o
  .group         0x0000000000000000        0xc ./Core/Src/scheduler.o
  .group         0x0000000000000000        0xc ./Core/Src/scheduler.o
+ .group         0x0000000000000000        0xc ./Core/Src/scheduler.o
  .text          0x0000000000000000        0x0 ./Core/Src/scheduler.o
  .data          0x0000000000000000        0x0 ./Core/Src/scheduler.o
  .bss           0x0000000000000000        0x0 ./Core/Src/scheduler.o
@@ -423,7 +430,7 @@ Discarded input sections
  .debug_abbrev  0x0000000000000000       0x9a ./Core/Src/scheduler.o
  .debug_aranges
                 0x0000000000000000       0x18 ./Core/Src/scheduler.o
- .debug_macro   0x0000000000000000      0x1ba ./Core/Src/scheduler.o
+ .debug_macro   0x0000000000000000      0x1bf ./Core/Src/scheduler.o
  .debug_macro   0x0000000000000000      0xa9c ./Core/Src/scheduler.o
  .debug_macro   0x0000000000000000       0x22 ./Core/Src/scheduler.o
  .debug_macro   0x0000000000000000       0x8e ./Core/Src/scheduler.o
@@ -460,8 +467,9 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x8ed ./Core/Src/scheduler.o
  .debug_macro   0x0000000000000000       0x69 ./Core/Src/scheduler.o
  .debug_macro   0x0000000000000000       0x64 ./Core/Src/scheduler.o
+ .debug_macro   0x0000000000000000       0x10 ./Core/Src/scheduler.o
  .debug_line    0x0000000000000000      0x7df ./Core/Src/scheduler.o
- .debug_str     0x0000000000000000    0x7f851 ./Core/Src/scheduler.o
+ .debug_str     0x0000000000000000    0x7f87e ./Core/Src/scheduler.o
  .comment       0x0000000000000000       0x54 ./Core/Src/scheduler.o
  .ARM.attributes
                 0x0000000000000000       0x33 ./Core/Src/scheduler.o
@@ -923,6 +931,7 @@ Discarded input sections
  .group         0x0000000000000000        0xc ./Core/Src/timer.o
  .group         0x0000000000000000        0xc ./Core/Src/timer.o
  .group         0x0000000000000000        0xc ./Core/Src/timer.o
+ .group         0x0000000000000000        0xc ./Core/Src/timer.o
  .text          0x0000000000000000        0x0 ./Core/Src/timer.o
  .data          0x0000000000000000        0x0 ./Core/Src/timer.o
  .bss           0x0000000000000000        0x0 ./Core/Src/timer.o
@@ -930,7 +939,7 @@ Discarded input sections
  .debug_abbrev  0x0000000000000000       0x9a ./Core/Src/timer.o
  .debug_aranges
                 0x0000000000000000       0x18 ./Core/Src/timer.o
- .debug_macro   0x0000000000000000      0x1bf ./Core/Src/timer.o
+ .debug_macro   0x0000000000000000      0x1c4 ./Core/Src/timer.o
  .debug_macro   0x0000000000000000      0xa9c ./Core/Src/timer.o
  .debug_macro   0x0000000000000000      0x215 ./Core/Src/timer.o
  .debug_macro   0x0000000000000000       0x2e ./Core/Src/timer.o
@@ -967,9 +976,10 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x8ed ./Core/Src/timer.o
  .debug_macro   0x0000000000000000       0x69 ./Core/Src/timer.o
  .debug_macro   0x0000000000000000       0x64 ./Core/Src/timer.o
+ .debug_macro   0x0000000000000000       0x10 ./Core/Src/timer.o
  .debug_macro   0x0000000000000000       0x34 ./Core/Src/timer.o
  .debug_line    0x0000000000000000      0x7d7 ./Core/Src/timer.o
- .debug_str     0x0000000000000000    0x7f905 ./Core/Src/timer.o
+ .debug_str     0x0000000000000000    0x7f932 ./Core/Src/timer.o
  .comment       0x0000000000000000       0x54 ./Core/Src/timer.o
  .ARM.attributes
                 0x0000000000000000       0x33 ./Core/Src/timer.o

@@ -1,0 +1,19 @@
+/*
+ * timer.c
+ *
+ *  Created on: 26 thg 11, 2023
+ *      Author: Amyra Nguyen
+ */
+
+
+#include "timer.h"
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
+	for(uint16_t timer = 0; timer < NUM_TIMER; timer++){
+		timers[timer].counter--;
+		if(timers[timer].counter <= 0){
+			timers[timer].flag = TURN_ON; 	// Raise the flag
+			timers[timer].counter = timers[timer].limit;	// Reset counter
+		}
+	}
+}

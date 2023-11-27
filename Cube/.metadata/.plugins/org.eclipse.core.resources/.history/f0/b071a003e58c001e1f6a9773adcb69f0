@@ -9,7 +9,7 @@
 #define INC_TIMER_H_
 
 #include "global.h"
-#define NO_TIMERS					6
+#define NO_TIMERS
 #define DEFAULT_TIMER_MS 			100
 #define TIMER_LED_500_MS			500
 #define TIMER_LED_1000_MS			1000
@@ -17,6 +17,7 @@
 #define TIMER_LED_2000_MS			2000
 #define TIMER_LED_2500_MS			2500
 #define TIMER_BUTTON_LONG_PRESS_MS 	3000
+#define TIMER_ONESHOT_MS			1000
 
 typedef struct{
 	int limit;

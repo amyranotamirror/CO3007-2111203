@@ -1,0 +1,6 @@
+button.c:28:9:acceptButtonData	32	static
+button.c:45:6:initButton	32	static
+button.c:64:6:readButton	16	static
+button.c:96:9:isButtonPressed	16	static
+button.c:100:9:isButtonLongPressed	16	static
+button.c:107:9:isButtonRequest	16	static

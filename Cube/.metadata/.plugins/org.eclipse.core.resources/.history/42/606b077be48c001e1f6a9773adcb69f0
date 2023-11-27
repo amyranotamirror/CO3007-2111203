@@ -48,7 +48,7 @@ void initButton(){
 											   BUTTON_INPUT_Pin};
 	// Initialize button status
 	for(uint32_t index = 0; index < NO_BUTTONS; index++){
-		Button *this = &buttonArray[index];
+		Button *this = buttonArray[index];
 		// Reset debouncing buffer
 		for(uint32_t sample = 0; sample < NO_SAMPLE; sample++)
 			this->debounceBuffer[sample] = BUTTON_IS_RELEASED;

@@ -9,7 +9,7 @@
 #define INC_LED_INDICATOR_H_
 
 #include "global.h"
-typedef enum {LED_500 = 0,
+typedef enum {LED_500,
 			  LED_1000,
 			  LED_1500,
 			  LED_2000,
