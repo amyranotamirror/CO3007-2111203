@@ -18,18 +18,12 @@ typedef struct _Button{
 	GPIO_PinState debounceBuffer[NO_SAMPLE];
 	uint32_t debounceCursor;
 
-	BUTTON_STATE resultState;
+	GPIO_PinState resultState;
 	uint32_t counterForLongPress;
 	uint8_t flagForLongPress;
+	uint8_t flagToRespond;
 } Button;
 Button buttonArray[NO_BUTTONS];
-
-// Private functions
-void resetButton(Button* this){
-	this->resultState = IS_RELEASE;
-	this->counterForLongPress = 0;
-	this->flagForLongPress = 0;
-}
 
 uint8_t acceptButtonData(Button* this){
 	// Read & Store sample data
@@ -54,11 +48,16 @@ void initButton(){
 											   BUTTON_INPUT_Pin};
 	// Initialize button status
 	for(uint32_t index = 0; index < NO_BUTTONS; index++){
-		// Reset debouncing variables once
+		Button *this = buttonArray[index];
+		// Reset debouncing buffer
 		for(uint32_t sample = 0; sample < NO_SAMPLE; sample++)
-			buttonArray[index].debounceBuffer[sample] = BUTTON_IS_RELEASED;
-		buttonArray[index].debounceCursor = 0;
-		resetButton(&buttonArray[index]);
+			this->debounceBuffer[sample] = BUTTON_IS_RELEASED;
+		this->debounceCursor = 0;
+		// Reset state / flag
+		this->resultState = BUTTON_IS_RELEASED;
+		this->counterForLongPress = 0;
+		this->flagForLongPress = FLAG_OFF;
+		this->flagToRespond = FLAG_OFF;
 	}
 }
 
@@ -66,17 +65,27 @@ void readButton(){
 	for(uint32_t index = 0; index < NO_BUTTONS; index++){
 		Button *this = &buttonArray[index];
 		if(acceptButtonData(this)){ // Respond to accepted data
-			// Pressed button: Single or Long press
-			if(this->debounceBuffer[this->debounceCursor] == BUTTON_IS_PRESSED){
-				if(this->counterForLongPress <= (TIMER_BUTTON_LONG_PRESS_MS / DEFAULT_TIMER_MS)){
-					this->counterForLongPress++; // Counting when pressed
-				} else{
-					this->flagForLongPress = 1; // Raise flag after time, since pressed
+			// Save result after debounced
+			this->resultState = this->debounceBuffer[this->debounceCursor];
+			switch(this->resultState){
+			case BUTTON_IS_PRESSED:
+				// First press: Detect & Respond
+				if(this->counterForLongPress == 0 &&
+						this->flagForLongPress == FLAG_OFF){
+					this->flagToRespond = FLAG_ON;	// Respond
 				}
-			}
-			// Release button: Clear long press
-			else{
-				resetButton(this);
+				// Long press until auto-increase
+				else if(this->counterForLongPress >= (TIMER_BUTTON_LONG_PRESS_MS / DEFAULT_TIMER_MS)){
+					this->flagForLongPress = FLAG_ON; 	// Change to auto-increase state
+					this->flagToRespond = FLAG_ON; 		// Respond
+					this->counterForLongPress = 0; 		// Reset counter for auto-increase
+				}
+				this->counterForLongPress += 1;
+				break;
+			case BUTTON_IS_RELEASED:
+				this->counterForLongPress = 0;
+				this->flagForLongPress = FLAG_OFF;
+				break;
 			}
 		}
 		// Next debounce sample
@@ -84,20 +93,21 @@ void readButton(){
 	}
 }
 
-uint16_t isButtonPressed(uint16_t ID){
-	uint16_t result = 0;
-	if(buttonArray[ID].resultState == IS_PRESSED){
-		buttonArray[ID].counterForLongPress != 0;
-		result = 1;// Get state
-	}
-	return result;
+uint8_t isButtonPressed(uint16_t ID){
+	return buttonArray[ID].resultState == BUTTON_IS_PRESSED;
 }
 
-uint16_t isButtonLongPressed(uint16_t ID){
-	uint16_t result = 0;
-	if(buttonArray[ID].resultState == IS_LONG_PRESSED){
-		buttonArray[ID].flagForLongPress = 0;// Reset flag
-		result = 1;
+uint8_t isButtonLongPressed(uint16_t ID){
+	if(buttonArray[ID].flagForLongPress == FLAG_ON){
+		buttonArray[ID].flagForLongPress = FLAG_OFF;// Reset flag
+		return 1;
 	}
-	return result;// Get state
+	return 0;// Get state
+}
+uint8_t isButtonRequest(uint16_t ID){
+	if(buttonArray[ID].flagToRespond == FLAG_ON){
+		buttonArray[ID].flagToRespond = FLAG_OFF;
+		return 1;
+	}
+	return 0;
 }

@@ -9,7 +9,8 @@
 #define INC_GLOBAL_H_
 
 #include "main.h"
-
+#define FLAG_ON		GPIO_PIN_RESET
+#define FLAG_OFF 	GPIO_PIN_SET
 // Port & Pin setup
 typedef struct _GPIO_config{
 	GPIO_TypeDef * port;

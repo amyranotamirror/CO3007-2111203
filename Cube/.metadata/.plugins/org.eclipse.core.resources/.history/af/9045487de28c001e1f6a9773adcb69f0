@@ -1,0 +1,24 @@
+/*
+ * button.h
+ *
+ *  Created on: 26 thg 11, 2023
+ *      Author: Amyra Nguyen
+ */
+
+#ifndef INC_BUTTON_H_
+#define INC_BUTTON_H_
+
+#include "global.h"
+#include "timer.h"
+typedef enum { BUTTON_IS_PRESSED = 0,
+			   BUTTON_IS_RELEASE,
+			   BUTTON_IS_PRESSDELAY,
+			   BUTTON_IS_LONG_PRESS
+};
+
+void initButton();
+void readButton();
+uint16_t isButtonPressed(uint16_t ID);
+uint16_t isButtonLongPressed(uint16_t ID);
+
+#endif /* INC_BUTTON_H_ */
