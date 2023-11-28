@@ -4,7 +4,7 @@
 Teacher: Huynh Phuc Nghi
 Student: Nguyen Thanh Hien
 
-This is a repository to track my progress while learning the experimental lab of CO3007 in the first semester, 2023 - 2024. 
+This is a repository to track my progress while learning the experimental lab of CO3009 in the first semester, 2023 - 2024. 
 - Requirements: can be retrieved via branch _**requirement**_
 - Report: can be retrieved via branch _**report**_
 - Exercise for each Lab can be retrieved via: _**Labx/Exercise_y**_ (with **x**: the lab index, **y**: exercise index)
