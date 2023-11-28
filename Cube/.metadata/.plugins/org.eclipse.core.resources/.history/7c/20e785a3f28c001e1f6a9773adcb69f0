@@ -1,0 +1,13 @@
+/*
+ * sch_report_error.h
+ *
+ *  Created on: Nov 27, 2023
+ *      Author: Amyra Nguyen
+ */
+
+#ifndef INC_SCH_REPORT_ERROR_H_
+#define INC_SCH_REPORT_ERROR_H_
+
+
+
+#endif /* INC_SCH_REPORT_ERROR_H_ */

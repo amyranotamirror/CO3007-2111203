@@ -1,2 +1,6 @@
 1701010535090	Delete resource 'Scheduler/Core/Src/gpio.c'
 1701010596285	Delete resource 'Scheduler/Core/Inc/gpio.h'
+1701112627783	Delete resource 'Scheduler/Core/Src/led_indicator.c'
+1701112637752	Delete resource 'Scheduler/Core/Inc/led_indicator.h'
+1701115653793	Delete resource 'Scheduler/Core/Inc/sch_report_error.h'
+1701115659061	Delete resource 'Scheduler/Core/Src/sch_report_error.c'

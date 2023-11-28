@@ -1,0 +1,40 @@
+/*
+ * sch_report_error.h
+ *
+ *  Created on: Nov 27, 2023
+ *      Author: Amyra Nguyen
+ */
+
+#ifndef INC_SCH_REPORT_ERROR_H_
+#define INC_SCH_REPORT_ERROR_H_
+#include "global.h"
+typedef enum {
+	DEFAULT = 0,
+	ERROR_SCH_TOO_MANY_TASKS,
+	ERROR_SCH_WAITING_FOR_SLAVE_TO_ACK,
+	ERROR_SCH_WAITING_FOR_START_COMMAND_FROM_MASTER,
+	ERROR_SCH_ONE_OR_MORE_SLAVES_DID_NOT_START,
+	ERROR_SCH_LOST_SLAVE,
+	ERROR_SCH_CAN_BUS_ERROR,
+	ERROR_I2C_WRITE_BYTE_AT24C64,
+	 ERROR_SCH_CANNOT_DELETE_TASK
+}_Error_code;
+
+typedef enum {
+	RETURN_ERROR = 0,
+	RETURN_NORMAL
+}_Return_code;
+
+typedef struct _SCH_Error_Handler{
+	_Error_code Last_error_code_G;
+	_Error_code Error_code_G;
+	GPIO_TypeDef * Error_port;
+	uint32_t Error_tick_count_G;
+} SCH_Error_Handler;
+
+SCH_Error_Handler SCH_ErrHandler;
+
+/* Public fucntion declaration */
+void SCH_Report_Task();
+
+#endif /* INC_SCH_REPORT_ERROR_H_ */

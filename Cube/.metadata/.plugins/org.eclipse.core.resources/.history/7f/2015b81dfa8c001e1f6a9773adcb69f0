@@ -1,0 +1,15 @@
+/*
+ * sch_report_error.c
+ *
+ *  Created on: Nov 27, 2023
+ *      Author: Amyra Nguyen
+ */
+
+#include "sch_report_error.h"
+
+void SCH_Report_Task(){
+	// Check for new error code
+	if(SCH_ErrHandler.Error_code_G != SCH_ErrHandler.Last_error_code_G){
+
+	}
+}

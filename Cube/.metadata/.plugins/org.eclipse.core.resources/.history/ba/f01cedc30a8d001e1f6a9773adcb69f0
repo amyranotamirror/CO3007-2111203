@@ -1,0 +1,26 @@
+/*
+ * timer.c
+ *
+ *  Created on: 26 thg 11, 2023
+ *      Author: Amyra Nguyen
+ */
+
+
+#include "timer.h"
+
+/* Public function  */
+void initTimer(){
+
+}
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	if (htim->Instance == htim2.Instance)
+	{
+		++systemTimer;
+		SCH_Update_Task();
+	}
+}
+
+void watchDog(){
+
+}

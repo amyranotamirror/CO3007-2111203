@@ -1,0 +1,15 @@
+/*
+ * gpio.c
+ *
+ *  Created on: 26 thg 11, 2023
+ *      Author: Amyra Nguyen
+ */
+
+
+#include "global.h"
+uint32_t systemTimer = 0;
+void printMessage(const char *msg){
+	char data[100];
+	uint8_t len = sprintf(data, "%s: %lu\r", msg, systemTimer);
+	HAL_UART_Transmit(&huart1, (uint8_t*)data, len, 500);
+}

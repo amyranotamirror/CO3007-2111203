@@ -1,0 +1,51 @@
+/*
+ * scheduler.h
+ *
+ *  Created on: 26 thg 11, 2023
+ *      Author: Amyra Nguyen
+ */
+
+#ifndef INC_SCHEDULER_H_
+#define INC_SCHEDULER_H_
+
+#include <stdint.h>
+#include "global.h"
+#include "timer.h"
+#include "button.h"
+#include "led_indicator.h"
+
+typedef struct _SchedulerTask{
+	void (*pTask)(void); 	// Pointer to the task
+	uint32_t delay; 		// Delay until next function to run
+	uint32_t period; 		// Interval between subsequent runs
+	uint8_t runMe;			// Incremented when task is due to execute
+	uint32_t taskID;
+} SchedulerTask;
+
+#define MAX_SCHEDULE_TASK 	40
+#define NO_TASK_ID			7
+SchedulerTask taskArray[MAX_SCHEDULE_TASK];
+typedef enum {
+	ERROR_SCH_TOO_MANY_TASKS = 0,
+	ERROR_SCH_WAITING_FOR_SLAVE_TO_ACK,
+	ERROR_SCH_WAITING_FOR_START_COMMAND_FROM_MASTER,
+	ERROR_SCH_ONE_OR_MORE_SLAVES_DID_NOT_START,
+	ERROR_SCH_LOST_SLAVE,
+	ERROR_SCH_CAN_BUS_ERROR,
+	ERROR_I2C_WRITE_BYTE_AT24C64,
+	 ERROR_SCH_CANNOT_DELETE_TASK
+}_Error_code;
+static _Error_code Error_code_G = 0;
+
+/* Public function declaration */
+void SCH_Init();
+uint16_t SCH_Add_Task(void (* pFunction) () ,
+			 	 unsigned int delay,
+				 unsigned int period);
+void SCH_Delete_Task(uint16_t taskID);
+void SCH_Update_Task();
+uint16_t SCH_Dispatch_Task();
+void SCH_Report_Task();
+void SCH_Go_To_Sleep();
+
+#endif /* INC_SCHEDULER_H_ */

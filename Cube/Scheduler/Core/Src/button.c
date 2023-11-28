@@ -10,8 +10,6 @@
 // Private variables / define / macros
 #define NO_BUTTONS			1
 #define NO_SAMPLE			3
-#define BUTTON_IS_PRESSED 	GPIO_PIN_RESET
-#define BUTTON_IS_RELEASED 	GPIO_PIN_SET
 
 typedef struct _Button{
 	GPIO_config connection; // Port & Pin
@@ -98,11 +96,7 @@ uint8_t isButtonPressed(uint16_t ID){
 }
 
 uint8_t isButtonLongPressed(uint16_t ID){
-	if(buttonArray[ID].flagForLongPress == FLAG_ON){
-		buttonArray[ID].flagForLongPress = FLAG_OFF;// Reset flag
-		return 1;
-	}
-	return 0;// Get state
+	return buttonArray[ID].flagForLongPress == FLAG_ON;
 }
 uint8_t isButtonRequest(uint16_t ID){
 	if(buttonArray[ID].flagToRespond == FLAG_ON){

@@ -1,0 +1,12 @@
+/*
+ * sch_report_error.c
+ *
+ *  Created on: Nov 27, 2023
+ *      Author: Amyra Nguyen
+ */
+
+#include "sch_report_error.h"
+
+void SCH_Report_Task(){
+	if(SCH_Error_Handler.)
+}

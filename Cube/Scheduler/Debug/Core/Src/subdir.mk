@@ -7,7 +7,6 @@
 C_SRCS += \
 ../Core/Src/button.c \
 ../Core/Src/global.c \
-../Core/Src/led_indicator.c \
 ../Core/Src/main.c \
 ../Core/Src/scheduler.c \
 ../Core/Src/stm32f1xx_hal_msp.c \
@@ -20,7 +19,6 @@ C_SRCS += \
 OBJS += \
 ./Core/Src/button.o \
 ./Core/Src/global.o \
-./Core/Src/led_indicator.o \
 ./Core/Src/main.o \
 ./Core/Src/scheduler.o \
 ./Core/Src/stm32f1xx_hal_msp.o \
@@ -33,7 +31,6 @@ OBJS += \
 C_DEPS += \
 ./Core/Src/button.d \
 ./Core/Src/global.d \
-./Core/Src/led_indicator.d \
 ./Core/Src/main.d \
 ./Core/Src/scheduler.d \
 ./Core/Src/stm32f1xx_hal_msp.d \

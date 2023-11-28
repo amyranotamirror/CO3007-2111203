@@ -1,0 +1,2 @@
+timer.c:12:6:initTimer	8	static
+timer.c:17:6:watchDog	4	static
