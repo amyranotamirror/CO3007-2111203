@@ -18,10 +18,10 @@ typedef struct _SchedulerTask{
 	void (*pTask)(void); 	// Pointer to the task
 	uint32_t period; 		// Interval between subsequent runs
 	uint32_t delay; 		// Time remain before executing next task
+	uint8_t flag;
 } SchedulerTask;
 
 #define MAX_SCHEDULE_TASK 	40
-#define NO_TASK_ID			7
 SchedulerTask taskArray[MAX_SCHEDULE_TASK];
 
 

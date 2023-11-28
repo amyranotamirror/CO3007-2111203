@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
  <FRAME activewindow="0">
-  <PLACEMENT>2c00000000000000010000000083ffff0083ffffffffffffffffffff0000000036000000f7050000fc030000</PLACEMENT>
+  <PLACEMENT>2c0000000000000001000000ffffffffffffffffffffffffffffffff0000000036000000f7050000fc030000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
  </FRAME>
  <MODULE name="VSMDEBUG">
@@ -334,9 +334,9 @@
    </POPUP>
    <POPUP w="600" x="729" flags="0000002a" y="620" h="400" pid="100" iid="1">
     <PROPERTIES>
-     <ITEM name="Breakpoint 0">"",80004EC,0000,D408,1F73,2018633360
+     <ITEM name="Breakpoint 0">"",80004EC,0000,1BF5,1F73,2018633360
 </ITEM>
-     <ITEM name="Breakpoint 1">"",8000518,0000,0769,1F73,150862816
+     <ITEM name="Breakpoint 1">"",8000518,0000,6D28,1F73,150862816
 </ITEM>
      <ITEM name="Breakpoint 2">"",8000524,0000,0D29,1F73,150862816
 </ITEM>
@@ -366,10 +366,10 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="258" x="769" flags="00000008" y="886" h="216" pid="102" iid="1">
+   <POPUP w="30" x="769" flags="00000008" y="886" h="13" pid="102" iid="1">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="194" x="789" flags="00000008" y="906" h="281" pid="191" iid="1">
+   <POPUP w="22" x="789" flags="00000008" y="906" h="18" pid="191" iid="1">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="450" x="1316" flags="00000022" y="375" h="250" pid="0" iid="18">
@@ -378,7 +378,7 @@
      <ITEM name="HexMode">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="610" x="267" flags="00000000" y="308" h="472" pid="0" iid="19">
+   <POPUP w="610" x="671" flags="00008001" y="183" h="472" pid="0" iid="19">
     <PROPERTIES/>
    </POPUP>
   </PWI>

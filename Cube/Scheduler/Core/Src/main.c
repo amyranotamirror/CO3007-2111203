@@ -115,15 +115,15 @@ int main(void)
   SCH_Add_Task(blinkLED1500, 0, TIMER_LED_1500_MS / DEFAULT_TIMER_MS);
   SCH_Add_Task(blinkLED2000, 0, TIMER_LED_2000_MS / DEFAULT_TIMER_MS);
   SCH_Add_Task(blinkLED2500, 0, TIMER_LED_2500_MS / DEFAULT_TIMER_MS);
-//  SCH_Add_Task(blinkLEDoneshot, TIMER_LED_ONESHOT_MS / DEFAULT_TIMER_MS, 0);
-//  SCH_Add_Task(blinkLEDButton, 0, DEFAULT_TIMER_MS / DEFAULT_TIMER_MS);
+  SCH_Add_Task(blinkLEDoneshot, TIMER_LED_ONESHOT_MS / DEFAULT_TIMER_MS, 0);
+  SCH_Add_Task(blinkLEDButton, 0, DEFAULT_TIMER_MS / DEFAULT_TIMER_MS);
 
   while (1)
   {
-	  SCH_Dispatch_Task();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  SCH_Dispatch_Task();
   }
   /* USER CODE END 3 */
 }
@@ -184,7 +184,7 @@ static void MX_TIM2_Init(void)
   htim2.Instance = TIM2;
   htim2.Init.Prescaler = 39999;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 1;
+  htim2.Init.Period = 2;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
@@ -276,7 +276,6 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-uint32_t timer = 0;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	SCH_Update_Task();
