@@ -9,7 +9,7 @@
 #define INC_F_TIMER_H_
 
 #include "main.h"
-#define RESEND_TIME_OUT_DURATION	100
+#define RESEND_TIME_OUT_DURATION	300
 #define TICK_DURATION				100
 #define TIMER_IDLE		0
 #define TIMER_COUNTING 	1

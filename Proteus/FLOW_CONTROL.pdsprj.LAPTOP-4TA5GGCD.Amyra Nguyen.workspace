@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
  <FRAME activewindow="0">
-  <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff1a0100000000000011070000c6030000</PLACEMENT>
+  <PLACEMENT>2c00000002000000030000000083ffff0083ffffffffffffffffffff1a0100000000000011070000c6030000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
  </FRAME>
  <MODULE name="VSMDEBUG">
@@ -32,7 +32,7 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="450" x="457" flags="00000022" y="387" h="250" pid="0" iid="3">
+   <POPUP w="450" x="513" flags="00008023" y="375" h="428" pid="0" iid="3">
     <PROPERTIES>
      <ITEM name="AutoEcho">0</ITEM>
      <ITEM name="HexMode">0</ITEM>
@@ -340,9 +340,9 @@
    </POPUP>
    <POPUP w="600" x="708" flags="0000002a" y="620" h="400" pid="100" iid="1">
     <PROPERTIES>
-     <ITEM name="Breakpoint 0">"",800051E,0000,5625,1CC2,-700657528
+     <ITEM name="Breakpoint 0">"",800052E,0000,88ED,1CC2,-700657528
 </ITEM>
-     <ITEM name="Breakpoint 1">"",800053E,0000,A8F4,1CC2,1902332856
+     <ITEM name="Breakpoint 1">"",800055A,0000,30EC,1CC2,1902332856
 </ITEM>
      <ITEM name="Breakpoint 2">"",800050A,0000,1B54,1CC2,-700657528
 </ITEM>
