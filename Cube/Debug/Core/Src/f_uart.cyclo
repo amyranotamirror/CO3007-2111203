@@ -1,0 +1,5 @@
+../Core/Src/f_uart.c:12:7:HAL_UART_RxCpltCallback	2
+../Core/Src/f_uart.c:21:6:uartSendReponse	1
+../Core/Src/f_uart.c:26:6:testSendRequest	1
+../Core/Src/f_uart.c:31:6:testSendACK	1
+../Core/Src/f_uart.c:36:6:testResend	1
