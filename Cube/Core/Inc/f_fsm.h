@@ -24,6 +24,8 @@ enum UART_STATE		{UART_WAIT_FOR_COMMAND = 0,
 extern enum PARSER_STATE PARSER_FSM;
 extern enum UART_STATE UART_FSM;
 extern uint8_t uartFlag;
+extern char parserBuffer[PARSER_BUFFER_SIZE];
+
 void fsmUARTCommunication();
 void fsmCommandParser();
 

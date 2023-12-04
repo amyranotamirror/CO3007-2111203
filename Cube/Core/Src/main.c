@@ -116,7 +116,7 @@ int main(void)
 		HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
 		systemTickFlag = 0;
 	}
-//	fsmUARTCommunication();
+	fsmUARTCommunication();
   }
   /* USER CODE END 3 */
 }

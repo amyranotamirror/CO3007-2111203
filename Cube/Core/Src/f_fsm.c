@@ -49,6 +49,7 @@ void parserIdle(){
 	if(parserByte == '!'){
 		parserBuffer[parserIndex++] = parserByte;
 		PARSER_FSM = PARSER_READING;
+//		testStartCmd();
 	}
 }
 
@@ -56,31 +57,35 @@ void parserReading(){
 	if(parserByte == '!'){// Read as new command
 		parserIndex = 0;
 		parserBuffer[parserIndex++] = parserByte;
+//		testResetCmd();
 	}
 	else if(parserByte == '\b'){//Delete character
 		parserBuffer[parserIndex--] = '\0';
-		if(parserIndex <= 0){
+		if(parserIndex < 0){
 			PARSER_FSM = PARSER_IDLE;
 		}
 	}
-	else if(parserByte == '\r'){// Process input
+	else if(parserByte == '\r' || parserByte == '\n'){// Process input
+		parserBuffer[parserIndex] = '\0';
 		if(strcmp(parserBuffer, "!OK#") == MATCHED){
 			uartFlag = FLAG_EXIT_REQUEST_ADC;
-			testSendRequest();
+//			testSendACK();
 		}
 		if(strcmp(parserBuffer, "!RST#") == MATCHED){
 			uartFlag = FLAG_REQUEST_ADC;
-			testSendRequest();
+//			testSendRequest();
 		}
 		PARSER_FSM = PARSER_IDLE;
 	}
 	else{// Store data
 		parserBuffer[parserIndex++] = parserByte;
+
 	}
 
 	// Check for buffer overflow
 	if(parserIndex >= PARSER_BUFFER_SIZE){
 		PARSER_FSM = PARSER_IDLE;
+//		testBufferOvf();
 	}
 }
 
@@ -89,11 +94,11 @@ void parserReading(){
 void uartWaitForCommand(){
 	if(uartFlag == FLAG_REQUEST_ADC){//REQUESTED
 		uartFlag = FLAG_NONE;
-		timerReset();
+//		timerReset();
 		timeoutFlag = TIMER_COUNTING;
 		ADCRead();
 		uartSendReponse();
-		testSendRequest();
+//		testSendRequest();
 		UART_FSM = UART_WAIT_FOR_ACK;
 	}
 }
@@ -103,11 +108,11 @@ void uartWaitForAck(){
 		uartFlag = FLAG_NONE;
 		timeoutFlag = TIMER_IDLE;
 		UART_FSM = UART_WAIT_FOR_COMMAND;
-		testSendACK();
+//		testSendACK();
 	} else if(timeoutFlag == TIMER_EXCEED){
 		timerReset();
 		timeoutFlag = TIMER_COUNTING;
 		uartSendReponse();
-		testResend();
+//		testResend();
 	}
 }

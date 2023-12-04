@@ -1,5 +1,8 @@
-../Core/Src/f_uart.c:12:7:HAL_UART_RxCpltCallback	24	static
-../Core/Src/f_uart.c:21:6:uartSendReponse	24	static
-../Core/Src/f_uart.c:26:6:testSendRequest	40	static
-../Core/Src/f_uart.c:31:6:testSendACK	40	static
-../Core/Src/f_uart.c:36:6:testResend	40	static
+../Core/Src/f_uart.c:13:7:HAL_UART_RxCpltCallback	24	static
+../Core/Src/f_uart.c:22:6:uartSendReponse	8	static
+../Core/Src/f_uart.c:26:6:testSendRequest	8	static
+../Core/Src/f_uart.c:30:6:testSendACK	8	static
+../Core/Src/f_uart.c:34:6:testResend	8	static
+../Core/Src/f_uart.c:38:6:testBufferOvf	8	static
+../Core/Src/f_uart.c:41:6:testResetCmd	8	static
+../Core/Src/f_uart.c:44:6:testStartCmd	8	static

@@ -23,5 +23,8 @@ void uartSendReponse();
 void testSendRequest(void);
 void testSendACK(void);
 void testResend(void);
+void testBufferOvf(void);
+void testResetCmd(void);
+void testStartCmd(void);
 
 #endif /* INC_F_UART_H_ */
